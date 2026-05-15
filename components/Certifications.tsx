@@ -113,8 +113,8 @@ export default function Certifications() {
         >
           <p className="section-label mb-2">Education</p>
           <h3 className="font-sora font-bold text-brand-light text-xl mb-2">Network Engineer Program</h3>
-          <p className="text-sm text-teal-300 font-semibold">CyberTex Institute of Technology, Austin, TX</p>
-          <p className="text-sm text-brand-muted mt-1">Apr 2025 - Apr 2026</p>
+          <p className="text-sm text-teal-300 font-semibold">Confidential Technical Training Program</p>
+          <p className="text-sm text-brand-muted mt-1">Prior Training</p>
         </motion.div>
 
         <motion.div

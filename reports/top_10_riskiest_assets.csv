@@ -1,0 +1,11 @@
+hostname,ip_address,owner,department,operating_system,vuln_count,max_cvss,avg_cvss,total_risk_score
+web01,10.10.1.10,J. Lee,Engineering,Ubuntu Server 22.04,3,9.4,8.166666666666666,76.4
+dc01,10.10.0.10,A. Kim,IT,Windows Server 2022,2,9.8,8.600000000000001,61.400000000000006
+ws01,10.10.5.10,E. Carter,Sales,Windows 11,2,9.1,7.15,46.8
+app01,10.10.1.20,S. Patel,Engineering,Ubuntu Server 22.04,2,8.9,7.25,37.900000000000006
+vpn01,10.10.2.10,N. Brown,Security,pfSense,1,8.1,8.1,24.299999999999997
+sql01,10.10.1.30,L. Chen,Finance,Windows Server 2019,1,7.8,7.8,23.4
+mail01,10.10.4.10,K. Davis,Operations,Windows Server 2019,1,7.2,7.2,21.6
+jump01,10.10.2.20,R. Gomez,IT,Windows Server 2022,1,6.2,6.2,12.4
+fs01,10.10.0.20,M. Reyes,Finance,Windows Server 2019,1,4.3,4.3,4.3
+vdi01,10.10.3.10,T. Nguyen,HR,Windows 11,1,3.7,3.7,3.7

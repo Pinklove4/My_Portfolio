@@ -1,0 +1,5 @@
+severity,vuln_count,avg_cvss,max_cvss
+Low,2,4.0,4.3
+Medium,4,5.875,6.5
+High,6,8.0,8.9
+Critical,3,9.433333333333334,9.8

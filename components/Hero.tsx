@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Download, Mail, Github, Linkedin, Shield, Network, Cloud } from 'lucide-react'
+import { ArrowRight, Mail, Github, Linkedin, Shield, Network, Cloud } from 'lucide-react'
 import { stagger, fadeUp, fadeIn } from '@/lib/motion'
 
 const stats = [
@@ -125,10 +125,6 @@ export default function Hero() {
             <a href="#projects" className="btn-primary">
               View Projects
               <ArrowRight className="w-4 h-4" />
-            </a>
-            <a href="#contact" className="btn-outline">
-              <Download className="w-4 h-4" />
-              Download Resume
             </a>
             <a href="#contact" className="btn-outline">
               <Mail className="w-4 h-4" />

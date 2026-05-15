@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Sora, Source_Sans_3 } from 'next/font/google'
+import Nav from '@/components/Nav'
+import Footer from '@/components/Footer'
 import './globals.css'
 
 const sora = Sora({
@@ -41,7 +43,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${sora.variable} ${sourceSans.variable}`}>
-      <body>{children}</body>
+      <body className="min-h-screen bg-navy-950 overflow-x-hidden flex flex-col">
+        <Nav />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </body>
     </html>
   )
 }

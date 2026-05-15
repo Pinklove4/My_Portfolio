@@ -2,10 +2,43 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ExternalLink, Github, ChevronDown, ChevronUp, Shield, Network, Cloud, Server, Monitor, Lock } from 'lucide-react'
+import { ExternalLink, Github, ChevronDown, ChevronUp, Shield, Network, Cloud, Server, Monitor, Lock, BarChart3 } from 'lucide-react'
 import { stagger, fadeUp, scaleIn } from '@/lib/motion'
 
 const projects = [
+  {
+    id: 0,
+    title: 'Security Data Analyst Roadmap Portfolio',
+    category: 'Cybersecurity / Data Analysis',
+    icon: BarChart3,
+    color: 'teal',
+    summary: 'Built a beginner-friendly SOC analytics project with SQL practice, pandas cleaning, vulnerability analysis, and asset risk lookups.',
+    tech: ['Python', 'pandas', 'SQL', 'CSV Analysis', 'Security Reporting', 'Data Cleaning'],
+    featured: true,
+    dashboardPreview: {
+      loginFailures: [
+        { label: 'apatel', value: 3 },
+        { label: 'dwhite', value: 2 },
+        { label: 'jdoe', value: 2 },
+        { label: 'kpatel', value: 2 },
+      ],
+      severityBreakdown: [
+        { label: 'Low', value: 2 },
+        { label: 'Medium', value: 4 },
+        { label: 'High', value: 6 },
+        { label: 'Critical', value: 3 },
+      ],
+      topAssets: [
+        { label: 'web01', value: 9.4 },
+        { label: 'dc01', value: 9.8 },
+        { label: 'ws01', value: 9.1 },
+      ],
+    },
+    problem: 'Needed a realistic portfolio project that shows how a junior analyst turns raw security data into useful findings.',
+    outcome: 'Created synthetic login, asset, and vulnerability datasets plus reusable scripts that generate clean reports, risk summaries, and dashboard planning notes.',
+    security: 'Focused on SOC-style workflows such as failed login analysis, vulnerability severity review, join-based asset lookup, and remediation tracking.',
+    challenges: 'Keeping the project beginner-friendly while still reflecting real analyst tasks and recruiter-ready documentation.',
+  },
   {
     id: 1,
     title: 'Enterprise VLAN Segmentation Lab',
@@ -89,6 +122,20 @@ const projects = [
 export default function Projects() {
   const [expanded, setExpanded] = useState<number | null>(null)
 
+  const renderMeter = (value: number, max: number, filledClass: string) => {
+    const filledSegments = Math.max(1, Math.round((value / max) * 10))
+    return (
+      <div className="flex-1 h-2 grid grid-cols-10 gap-0.5 rounded-full bg-navy-800/80 overflow-hidden">
+        {Array.from({ length: 10 }).map((_, index) => (
+          <span
+            key={index}
+            className={`h-full rounded-full ${index < filledSegments ? filledClass : 'bg-navy-700/70'}`}
+          />
+        ))}
+      </div>
+    )
+  }
+
   return (
     <section id="projects" className="py-24 lg:py-32 relative">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-teal-300/20 to-transparent" />
@@ -125,7 +172,7 @@ export default function Projects() {
                 key={project.id}
                 variants={scaleIn}
                 layout
-                className="card-glass overflow-hidden flex flex-col"
+                className={`card-glass overflow-hidden flex flex-col ${project.featured ? 'ring-1 ring-teal-300/25 shadow-lg shadow-teal-300/5' : ''}`}
               >
                 {/* Card header */}
                 <div className="p-5 border-b border-navy-700/40">
@@ -143,11 +190,90 @@ export default function Projects() {
                       {project.category}
                     </span>
                   </div>
+                  {project.featured && (
+                    <div className="inline-flex items-center gap-1 text-[10px] uppercase tracking-[0.18em] font-bold text-teal-300 bg-teal-300/10 border border-teal-300/20 rounded-full px-2.5 py-1 mb-3">
+                      Featured Portfolio Project
+                    </div>
+                  )}
                   <h3 className="font-sora font-bold text-brand-light text-base mb-2 leading-snug">
                     {project.title}
                   </h3>
                   <p className="text-brand-muted text-sm leading-relaxed">{project.summary}</p>
                 </div>
+
+                {project.featured && project.dashboardPreview && (
+                  <div className="px-5 py-4 border-b border-navy-700/30 bg-navy-900/30">
+                    <div className="text-xs font-bold uppercase tracking-wide text-brand-muted mb-3">
+                      Real analysis preview from generated CSV outputs
+                    </div>
+
+                    <div className="grid gap-3">
+                      <div className="rounded-xl border border-navy-700/40 bg-navy-950/35 p-3">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-[10px] uppercase tracking-wide text-brand-muted">Failed logins by user</span>
+                          <span className="text-[10px] text-brand-muted">Top contributors</span>
+                        </div>
+                        <div className="space-y-2">
+                          {project.dashboardPreview.loginFailures.map((item) => (
+                            <div key={item.label} className="flex items-center gap-2">
+                              <span className="w-16 shrink-0 text-[11px] text-brand-muted">{item.label}</span>
+                              {renderMeter(item.value, 3, 'bg-gradient-to-r from-teal-300 to-sky-400')}
+                              <span className="w-5 text-right text-[11px] text-brand-light font-semibold">{item.value}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div className="rounded-xl border border-navy-700/40 bg-navy-950/35 p-3">
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-[10px] uppercase tracking-wide text-brand-muted">Vulnerabilities by severity</span>
+                            <span className="text-[10px] text-brand-muted">14 findings</span>
+                          </div>
+                          <div className="space-y-2">
+                            {project.dashboardPreview.severityBreakdown.map((item) => (
+                              <div key={item.label} className="flex items-center gap-2">
+                                <span className="w-14 shrink-0 text-[11px] text-brand-muted">{item.label}</span>
+                                {renderMeter(
+                                  item.value,
+                                  6,
+                                  item.label === 'Critical'
+                                    ? 'bg-rose-400'
+                                    : item.label === 'High'
+                                      ? 'bg-amber-400'
+                                      : item.label === 'Medium'
+                                        ? 'bg-sky-400'
+                                        : 'bg-teal-300'
+                                )}
+                                <span className="w-5 text-right text-[11px] text-brand-light font-semibold">{item.value}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div className="rounded-xl border border-navy-700/40 bg-navy-950/35 p-3">
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-[10px] uppercase tracking-wide text-brand-muted">Top risky assets</span>
+                            <span className="text-[10px] text-brand-muted">Max CVSS</span>
+                          </div>
+                          <div className="space-y-2">
+                            {project.dashboardPreview.topAssets.map((item) => (
+                              <div key={item.label} className="flex items-center gap-2">
+                                <span className="w-14 shrink-0 text-[11px] text-brand-muted">{item.label}</span>
+                                {renderMeter(item.value, 10, 'bg-gradient-to-r from-sky-400 to-teal-300')}
+                                <span className="w-8 text-right text-[11px] text-brand-light font-semibold">{item.value.toFixed(1)}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      <p className="text-[11px] text-brand-muted leading-relaxed">
+                        Derived from synthetic CSV outputs created by the Python scripts in this repo. The dashboard preview reflects actual analysis results, not placeholder data.
+                      </p>
+                    </div>
+                  </div>
+                )}
 
                 {/* Tech stack */}
                 <div className="px-5 py-3 border-b border-navy-700/30">

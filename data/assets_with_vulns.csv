@@ -1,0 +1,16 @@
+hostname,ip_address,owner,department,operating_system,asset_id_or_name,cve_id,cvss_score,severity,remediation_notes,severity_weight,risk_score
+dc01,10.10.0.10,A. Kim,IT,Windows Server 2022,dc01,CVE-2025-1001,9.8,Critical,Patch the domain controller and verify Kerberos authentication paths.,4,39.2
+dc01,10.10.0.10,A. Kim,IT,Windows Server 2022,dc01,CVE-2025-2455,7.4,High,Patch the directory services host and confirm group policy refresh.,3,22.200000000000003
+fs01,10.10.0.20,M. Reyes,Finance,Windows Server 2019,fs01,CVE-2025-0715,4.3,Low,Monitor the file server and apply the vendor update.,1,4.3
+web01,10.10.1.10,J. Lee,Engineering,Ubuntu Server 22.04,web01,CVE-2024-4431,8.6,High,Update web server packages and reduce exposed services.,3,25.799999999999997
+web01,10.10.1.10,J. Lee,Engineering,Ubuntu Server 22.04,web01,CVE-2024-5120,6.5,Medium,Review application input validation and patch the dependency library.,2,13.0
+web01,10.10.1.10,J. Lee,Engineering,Ubuntu Server 22.04,web01,CVE-2025-8181,9.4,Critical,Apply the critical patch and validate TLS configuration.,4,37.6
+app01,10.10.1.20,S. Patel,Engineering,Ubuntu Server 22.04,app01,CVE-2025-2211,5.6,Medium,Apply framework updates and retest application controls.,2,11.2
+app01,10.10.1.20,S. Patel,Engineering,Ubuntu Server 22.04,app01,CVE-2024-6122,8.9,High,Patch the application stack and review authentication logs.,3,26.700000000000003
+sql01,10.10.1.30,L. Chen,Finance,Windows Server 2019,sql01,CVE-2023-3884,7.8,High,Install the database patch and rotate service credentials.,3,23.4
+vpn01,10.10.2.10,N. Brown,Security,pfSense,vpn01,CVE-2024-8899,8.1,High,Upgrade the VPN appliance firmware and validate MFA enforcement.,3,24.299999999999997
+jump01,10.10.2.20,R. Gomez,IT,Windows Server 2022,jump01,CVE-2024-2310,6.2,Medium,Restrict administrative access and patch remote management software.,2,12.4
+vdi01,10.10.3.10,T. Nguyen,HR,Windows 11,vdi01,CVE-2025-3004,3.7,Low,Apply the endpoint update and confirm baseline settings.,1,3.7
+mail01,10.10.4.10,K. Davis,Operations,Windows Server 2019,mail01,CVE-2024-5419,7.2,High,Update mail services and review anti-phishing controls.,3,21.6
+ws01,10.10.5.10,E. Carter,Sales,Windows 11,ws01,CVE-2025-9002,5.2,Medium,Apply desktop security updates and verify local admin removal.,2,10.4
+ws01,10.10.5.10,E. Carter,Sales,Windows 11,ws01,CVE-2024-7711,9.1,Critical,Patch the workstation immediately and re-scan for compromise indicators.,4,36.4

@@ -1,0 +1,11 @@
+hostname,ip_address,owner,department,operating_system
+dc01,10.10.0.10,A. Kim,IT,Windows Server 2022
+fs01,10.10.0.20,M. Reyes,Finance,Windows Server 2019
+web01,10.10.1.10,J. Lee,Engineering,Ubuntu Server 22.04
+app01,10.10.1.20,S. Patel,Engineering,Ubuntu Server 22.04
+sql01,10.10.1.30,L. Chen,Finance,Windows Server 2019
+vpn01,10.10.2.10,N. Brown,Security,pfSense
+jump01,10.10.2.20,R. Gomez,IT,Windows Server 2022
+vdi01,10.10.3.10,T. Nguyen,HR,Windows 11
+mail01,10.10.4.10,K. Davis,Operations,Windows Server 2019
+ws01,10.10.5.10,E. Carter,Sales,Windows 11

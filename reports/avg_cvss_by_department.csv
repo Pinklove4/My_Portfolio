@@ -1,0 +1,8 @@
+department,avg_cvss,vuln_count,max_cvss
+Security,8.1,1,8.1
+IT,7.800000000000001,3,9.8
+Engineering,7.8,5,9.4
+Operations,7.2,1,7.2
+Sales,7.15,2,9.1
+Finance,6.05,2,7.8
+HR,3.7,1,3.7
