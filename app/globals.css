@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0b1622;
+  color: #e8f2fc;
+  font-family: var(--font-source), 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0b1622; }
+::-webkit-scrollbar-thumb { background: #1e4a6a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #5eead4; }
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-teal-300 to-sky-400;
+  }
+  .card-glass {
+    @apply bg-navy-800/40 backdrop-blur-sm border border-navy-700/50 rounded-2xl;
+  }
+  .section-label {
+    @apply text-xs font-bold tracking-widest uppercase text-teal-300 mb-3 font-sora;
+  }
+  .section-title {
+    @apply font-sora font-bold text-brand-light leading-tight;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-teal-300 to-sky-400 text-navy-950 font-bold text-sm transition-all hover:brightness-110 hover:shadow-lg hover:shadow-teal-300/20 active:scale-95;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-teal-300/40 text-teal-300 text-sm font-semibold transition-all hover:bg-teal-300/10 hover:border-teal-300/70 active:scale-95;
+  }
+  .skill-tag {
+    @apply px-3 py-1 rounded-full text-xs font-medium bg-navy-800/80 border border-navy-700/60 text-brand-muted hover:border-teal-300/50 hover:text-teal-300 transition-all cursor-default;
+  }
+}
