@@ -55,8 +55,8 @@ export default function Footer() {
             <div className="flex flex-col gap-2">
               {[
                 { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/teliyah-perez-b31624365', color: 'hover:text-sky-400' },
-                { icon: Github, label: 'GitHub', href: 'https://github.com', color: 'hover:text-teal-300' },
-                { icon: Mail, label: 'Email', href: 'mailto:teliyah@example.com', color: 'hover:text-teal-300' },
+                { icon: Github, label: 'GitHub', href: 'https://github.com/Pinklove4', color: 'hover:text-teal-300' },
+                { icon: Mail, label: 'Email', href: 'mailto:tp787tmt@gmail.com', color: 'hover:text-teal-300' },
               ].map(({ icon: Icon, label, href, color }) => (
                 <a
                   key={label}

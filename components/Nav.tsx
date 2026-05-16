@@ -46,7 +46,7 @@ export default function Nav() {
             <Terminal className="w-4 h-4 text-teal-300" />
           </div>
           <span className="font-sora font-bold text-brand-light text-sm tracking-wide">
-            Teliyah<span className="text-teal-300">.</span>dev
+            Teliyah Portfolio
           </span>
         </Link>
 

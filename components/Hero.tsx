@@ -122,11 +122,11 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div variants={fadeUp} className="flex flex-wrap gap-3 mb-10">
-            <a href="#projects" className="btn-primary">
+            <a href="/projects" className="btn-primary">
               View Projects
               <ArrowRight className="w-4 h-4" />
             </a>
-            <a href="#contact" className="btn-outline">
+            <a href="/contact" className="btn-outline">
               <Mail className="w-4 h-4" />
               Contact Me
             </a>
@@ -137,7 +137,7 @@ export default function Hero() {
             <span className="text-xs text-brand-muted uppercase tracking-widest font-medium">Find me on</span>
             <div className="flex gap-2">
               <a
-                href="https://github.com"
+                href="https://github.com/Pinklove4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-navy-800/60 border border-navy-700/60 flex items-center justify-center text-brand-muted hover:text-teal-300 hover:border-teal-300/50 hover:bg-teal-300/10 transition-all duration-200"
@@ -155,7 +155,7 @@ export default function Hero() {
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href="mailto:teliyah@example.com"
+                href="mailto:tp787tmt@gmail.com"
                 className="w-9 h-9 rounded-lg bg-navy-800/60 border border-navy-700/60 flex items-center justify-center text-brand-muted hover:text-teal-300 hover:border-teal-300/50 hover:bg-teal-300/10 transition-all duration-200"
                 aria-label="Email"
               >

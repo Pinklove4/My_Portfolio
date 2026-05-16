@@ -16,7 +16,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // In a static export, open mailto as fallback
-    const mailto = `mailto:teliyah@example.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(
+    const mailto = `mailto:tp787tmt@gmail.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(
       `From: ${form.name} (${form.email})\n\n${form.message}`
     )}`
     window.location.href = mailto
@@ -27,22 +27,22 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'teliyah@example.com',
-      href: 'mailto:teliyah@example.com',
+      value: 'tp787tmt@gmail.com',
+      href: 'mailto:tp787tmt@gmail.com',
       color: 'teal',
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      value: 'linkedin.com/in/teliyah-perez',
+      value: 'www.linkedin.com/in/teliyah-perez-b31624365',
       href: 'https://www.linkedin.com/in/teliyah-perez-b31624365',
       color: 'sky',
     },
     {
       icon: Github,
       label: 'GitHub',
-      value: 'github.com/teliyah',
-      href: 'https://github.com',
+      value: 'github.com/Pinklove4',
+      href: 'https://github.com/Pinklove4',
       color: 'teal',
     },
     {

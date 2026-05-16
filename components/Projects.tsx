@@ -317,7 +317,7 @@ export default function Projects() {
                 <div className="px-5 py-3 mt-auto flex items-center justify-between">
                   <div className="flex gap-2">
                     <a
-                      href="https://github.com"
+                      href="https://github.com/Pinklove4"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-1.5 text-xs text-brand-muted hover:text-teal-300 transition-colors"
