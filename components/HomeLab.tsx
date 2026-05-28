@@ -278,7 +278,7 @@ export default function HomeLab() {
             Infrastructure & Home Lab Topology
           </motion.p>
           <motion.h2 variants={fadeUp} className="section-title mb-4 text-4xl lg:text-5xl">
-            Simulated Home Lab & Network Topology
+            Home Lab & Network Topology
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto max-w-3xl text-base leading-7 text-brand-muted md:text-lg">
             Hands-on cybersecurity lab focused on networking, SIEM monitoring, firewall administration, VLAN
