@@ -1,0 +1,7 @@
+timestamp,computer,event_id,account_name,source_ip,logon_type,status,details
+2026-05-12T14:01:10Z,WIN-CLIENT01,4625,j.smith,203.0.113.45,3,Failure,Unknown username or bad password
+2026-05-12T14:01:48Z,WIN-CLIENT01,4625,j.smith,203.0.113.45,3,Failure,Unknown username or bad password
+2026-05-12T14:02:31Z,WIN-CLIENT01,4625,j.smith,203.0.113.45,3,Failure,Unknown username or bad password
+2026-05-12T14:05:12Z,WIN-CLIENT01,4625,svc-backup,203.0.113.45,3,Failure,Unknown username or bad password
+2026-05-12T14:12:55Z,WIN-CLIENT01,4624,svc-backup,203.0.113.45,3,Success,Network logon successful
+2026-05-12T14:13:40Z,WIN-CLIENT01,4672,svc-backup,203.0.113.45,N/A,Success,Special privileges assigned to new logon

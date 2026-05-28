@@ -1,0 +1,7 @@
+timestamp,src_ip,dst_ip,src_port,dst_port,protocol,action,bytes,notes
+2026-05-17T18:03:14Z,10.10.30.44,10.10.30.10,52918,22,TCP,Denied,0,Repeated SSH attempts
+2026-05-17T18:03:16Z,10.10.30.44,10.10.30.10,52919,23,TCP,Denied,0,Port probe pattern
+2026-05-17T18:03:17Z,10.10.30.44,10.10.30.10,52920,80,TCP,Allowed,421,HTTP banner grab
+2026-05-17T18:03:18Z,10.10.30.44,10.10.30.10,52921,443,TCP,Allowed,910,TLS handshake
+2026-05-17T18:04:01Z,10.10.30.44,198.51.100.24,53002,53,UDP,Allowed,129,DNS lookup unusual domain
+2026-05-17T18:04:07Z,10.10.30.44,198.51.100.24,53003,53,UDP,Allowed,134,DNS lookup unusual domain

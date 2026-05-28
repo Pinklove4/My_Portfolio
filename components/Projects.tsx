@@ -40,6 +40,20 @@ const projects = [
     challenges: 'Keeping the project beginner-friendly while still reflecting real analyst tasks and recruiter-ready documentation.',
   },
   {
+    id: 7,
+    title: 'Cybersecurity Portfolio: SOC and Cloud Security Labs',
+    category: 'Cybersecurity',
+    icon: Shield,
+    color: 'teal',
+    featured: true,
+    summary: 'Built a recruiter-ready cybersecurity repository with five realistic labs covering SOC operations, Active Directory security, vulnerability management, packet analysis, and cloud IAM hardening.',
+    tech: ['Wazuh/Splunk', 'Windows Event Logs', 'Linux Auth Logs', 'Nessus/OpenVAS', 'Wireshark', 'Nmap', 'AWS IAM', 'PowerShell', 'Python'],
+    problem: 'Needed a professional, end-to-end portfolio that demonstrates practical SOC analyst workflows using realistic evidence and formal report writing.',
+    outcome: 'Created a structured project repository with lab scenarios, sample logs, incident templates, and investigation notes that mirror entry-level analyst responsibilities.',
+    security: 'Demonstrates authentication monitoring, AD identity investigations, vulnerability prioritization, network traffic analysis, and IAM least-privilege remediation in safe lab environments.',
+    challenges: 'Balancing beginner-friendly setup guidance with realistic analyst documentation expected by recruiters and hiring managers.',
+  },
+  {
     id: 1,
     title: 'Enterprise VLAN Segmentation Lab',
     category: 'Networking',
@@ -317,7 +331,9 @@ export default function Projects() {
                 <div className="px-5 py-3 mt-auto flex items-center justify-between">
                   <div className="flex gap-2">
                     <a
-                      href="https://github.com/Pinklove4"
+                      href={project.id === 7
+                        ? 'https://github.com/Pinklove4/My_Portfolio/tree/main/cybersecurity-portfolio'
+                        : 'https://github.com/Pinklove4'}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-1.5 text-xs text-brand-muted hover:text-teal-300 transition-colors"
@@ -326,7 +342,11 @@ export default function Projects() {
                       Code
                     </a>
                     <a
-                      href="#"
+                      href={project.id === 7
+                        ? 'https://my-website-portfolio-beta-five.vercel.app/projects'
+                        : '#'}
+                      target={project.id === 7 ? '_blank' : undefined}
+                      rel={project.id === 7 ? 'noopener noreferrer' : undefined}
                       className="flex items-center gap-1.5 text-xs text-brand-muted hover:text-sky-400 transition-colors"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />

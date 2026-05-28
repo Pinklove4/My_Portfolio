@@ -1,0 +1,29 @@
+[
+  {
+    "eventTime": "2026-05-19T11:05:22Z",
+    "eventSource": "iam.amazonaws.com",
+    "eventName": "AttachUserPolicy",
+    "userIdentity": {"userName": "cloud-admin-lab"},
+    "requestParameters": {
+      "userName": "analyst-test",
+      "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+    },
+    "sourceIPAddress": "198.51.100.81"
+  },
+  {
+    "eventTime": "2026-05-19T11:12:49Z",
+    "eventSource": "iam.amazonaws.com",
+    "eventName": "CreateAccessKey",
+    "userIdentity": {"userName": "analyst-test"},
+    "requestParameters": {"userName": "analyst-test"},
+    "sourceIPAddress": "198.51.100.81"
+  },
+  {
+    "eventTime": "2026-05-19T11:25:03Z",
+    "eventSource": "iam.amazonaws.com",
+    "eventName": "UpdateAssumeRolePolicy",
+    "userIdentity": {"userName": "cloud-admin-lab"},
+    "requestParameters": {"roleName": "AppDeployRole"},
+    "sourceIPAddress": "198.51.100.81"
+  }
+]

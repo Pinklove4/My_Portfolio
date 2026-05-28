@@ -1,0 +1,7 @@
+timestamp,dc_host,event_id,user,source_host,action,result
+2026-05-14T09:10:02Z,DC01,4625,j.adams,WS-22,Failed logon,Failure
+2026-05-14T09:10:28Z,DC01,4625,j.adams,WS-22,Failed logon,Failure
+2026-05-14T09:12:41Z,DC01,4740,j.adams,DC01,Account lockout,Success
+2026-05-14T09:17:05Z,DC01,4728,helpdesk1,WS-18,Added member to Security Group,Success
+2026-05-14T09:20:16Z,DC01,4768,svc-print,WS-22,Kerberos TGT requested,Failure
+2026-05-14T09:20:44Z,DC01,4768,svc-print,WS-22,Kerberos TGT requested,Failure

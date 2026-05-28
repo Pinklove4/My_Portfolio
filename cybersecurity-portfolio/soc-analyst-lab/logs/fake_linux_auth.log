@@ -1,0 +1,6 @@
+May 12 14:00:41 ubuntu-lab sshd[21831]: Failed password for invalid user admin from 203.0.113.45 port 52214 ssh2
+May 12 14:00:48 ubuntu-lab sshd[21831]: Failed password for invalid user admin from 203.0.113.45 port 52214 ssh2
+May 12 14:01:09 ubuntu-lab sshd[21835]: Failed password for root from 203.0.113.45 port 52228 ssh2
+May 12 14:01:34 ubuntu-lab sshd[21839]: Failed password for root from 203.0.113.45 port 52241 ssh2
+May 12 14:11:58 ubuntu-lab sshd[21902]: Accepted password for svc-backup from 203.0.113.45 port 52877 ssh2
+May 12 14:12:05 ubuntu-lab sudo: svc-backup : TTY=pts/0 ; PWD=/home/svc-backup ; USER=root ; COMMAND=/usr/bin/systemctl status ssh

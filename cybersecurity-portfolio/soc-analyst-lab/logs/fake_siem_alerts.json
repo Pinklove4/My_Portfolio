@@ -1,0 +1,21 @@
+[
+  {
+    "alert_id": "SOC-2026-0512-001",
+    "severity": "high",
+    "rule_name": "Excessive Authentication Failures Followed by Success",
+    "source_ip": "203.0.113.45",
+    "target_hosts": ["WIN-CLIENT01", "ubuntu-lab"],
+    "first_seen": "2026-05-12T14:00:41Z",
+    "last_seen": "2026-05-12T14:13:40Z",
+    "status": "investigating"
+  },
+  {
+    "alert_id": "SOC-2026-0512-002",
+    "severity": "medium",
+    "rule_name": "Privileged Logon from Untrusted IP",
+    "source_ip": "203.0.113.45",
+    "target_host": "WIN-CLIENT01",
+    "event_id": 4672,
+    "status": "open"
+  }
+]
