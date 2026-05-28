@@ -250,7 +250,7 @@ const logSamples = {
   vpn: '2026-05-28 20:22:18 peer-laptop handshake complete, tunnel 10.8.0.2 assigned, management access allowed',
 }
 
-const downloadableReportPath = '/downloads/teliyah-perez-home-lab-report.html'
+const downloadableReportPath = '/downloads/teliyah-perez-home-lab-report'
 
 export default function HomeLab() {
   return (
@@ -641,8 +641,8 @@ export default function HomeLab() {
                 <a href={downloadableReportPath} target="_blank" rel="noreferrer" className="btn-primary">
                   Open Report
                 </a>
-                <a href={downloadableReportPath} download className="btn-outline">
-                  Download HTML Copy
+                <a href={downloadableReportPath} target="_blank" rel="noreferrer" className="btn-outline">
+                  Printable View
                 </a>
               </div>
               <p className="mt-4 text-xs leading-6 text-brand-muted">
