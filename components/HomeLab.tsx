@@ -275,23 +275,21 @@ export default function HomeLab() {
           className="mb-14 text-center"
         >
           <motion.p variants={fadeUp} className="section-label">
-            Infrastructure / Home Lab
+            Infrastructure & Home Lab Topology
           </motion.p>
           <motion.h2 variants={fadeUp} className="section-title mb-4 text-4xl lg:text-5xl">
             Simulated Home Lab & Network Topology
           </motion.h2>
           <motion.p variants={fadeUp} className="mx-auto max-w-3xl text-base leading-7 text-brand-muted md:text-lg">
-            An enterprise-style home lab designed to simulate real-world infrastructure, networking, and security
-            monitoring workflows. This simulated home-lab environment was built for hands-on learning across
-            firewall administration, VLAN segmentation, virtualization, SIEM analysis, monitoring, VPN access, and
-            technical troubleshooting.
+            Hands-on cybersecurity lab focused on networking, SIEM monitoring, firewall administration, VLAN
+            segmentation, virtualization, and infrastructure troubleshooting.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-6 flex flex-wrap justify-center gap-3">
             <span className="rounded-full border border-teal-300/30 bg-teal-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-teal-300">
-              Simulated home-lab environment
+              Home-lab environment
             </span>
             <span className="rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-sky-300">
-              Designed for hands-on learning
+              hands-on learning
             </span>
             <span className="rounded-full border border-navy-600/60 bg-navy-800/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-muted">
               Cybersecurity Analyst / SOC Analyst candidate
@@ -656,7 +654,7 @@ export default function HomeLab() {
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">Preview</p>
                 <h4 className="mt-3 font-sora text-xl font-bold text-slate-900">Infrastructure / Home Lab Report</h4>
                 <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Simulated home-lab environment built for hands-on learning in network segmentation, firewall rule
+                  Home-lab environment built for hands-on learning in network segmentation, firewall rule
                   design, SIEM monitoring, VPN testing, virtualization, and troubleshooting.
                 </p>
                 <div className="mt-4 grid gap-3 text-sm text-slate-700 md:grid-cols-2">

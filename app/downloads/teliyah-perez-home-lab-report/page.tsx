@@ -87,7 +87,7 @@ export default function HomeLabReportPage() {
             Infrastructure / Home Lab Report
           </h1>
           <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
-            Simulated home-lab environment built for hands-on learning across networking, firewall administration,
+            Home-lab environment built for hands-on learning across networking, firewall administration,
             VLAN segmentation, SIEM monitoring, VPN access, virtualization, and troubleshooting.
           </p>
           <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
@@ -101,7 +101,7 @@ export default function HomeLabReportPage() {
             </div>
             <div className="rounded-2xl border border-slate-200 bg-white/80 p-4">
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Environment</p>
-              <p className="mt-1 text-sm font-semibold text-slate-900">Simulated home-lab environment</p>
+              <p className="mt-1 text-sm font-semibold text-slate-900">Home-lab environment</p>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-white/80 p-4">
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">Focus</p>
