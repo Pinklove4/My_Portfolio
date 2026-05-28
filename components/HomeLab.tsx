@@ -250,7 +250,7 @@ const logSamples = {
   vpn: '2026-05-28 20:22:18 peer-laptop handshake complete, tunnel 10.8.0.2 assigned, management access allowed',
 }
 
-const downloadableReportPath = '/lab/teliyah-perez-home-lab-report.html'
+const downloadableReportPath = '/downloads/teliyah-perez-home-lab-report.html'
 
 export default function HomeLab() {
   return (
