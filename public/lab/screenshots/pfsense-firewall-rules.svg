@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" fill="none">
+  <rect width="1280" height="720" rx="24" fill="#08131d"/>
+  <rect x="36" y="36" width="1208" height="648" rx="18" fill="#0d1b2a" stroke="#1e3a4a"/>
+  <rect x="68" y="78" width="1144" height="56" rx="12" fill="#10263a"/>
+  <text x="92" y="113" fill="#d9ecff" font-size="24" font-family="Segoe UI, Arial">pfSense Firewall Rules</text>
+  <text x="1010" y="113" fill="#5eead4" font-size="18" font-family="Segoe UI, Arial">Rule Review</text>
+  <rect x="68" y="162" width="1144" height="70" rx="12" fill="#0f2234" stroke="#1d4b63"/>
+  <text x="94" y="205" fill="#9ec8f5" font-size="20" font-family="Segoe UI, Arial">Allow WireGuard management access to VLAN 10 HTTPS and RDP</text>
+  <rect x="68" y="252" width="1144" height="70" rx="12" fill="#0f2234" stroke="#1d4b63"/>
+  <text x="94" y="295" fill="#9ec8f5" font-size="20" font-family="Segoe UI, Arial">Block IoT network to management subnet and log deny events</text>
+  <rect x="68" y="342" width="1144" height="70" rx="12" fill="#0f2234" stroke="#1d4b63"/>
+  <text x="94" y="385" fill="#9ec8f5" font-size="20" font-family="Segoe UI, Arial">Allow Wazuh agent communication from servers and workstations</text>
+  <rect x="68" y="432" width="1144" height="70" rx="12" fill="#0f2234" stroke="#1d4b63"/>
+  <text x="94" y="475" fill="#9ec8f5" font-size="20" font-family="Segoe UI, Arial">Log DMZ ingress traffic forwarded to Splunk</text>
+  <text x="68" y="618" fill="#7ea6c9" font-size="18" font-family="Segoe UI, Arial">Firewall rule review evidence from the home lab environment.</text>
+</svg>

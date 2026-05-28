@@ -5,7 +5,7 @@ import { fadeUp, scaleIn, stagger } from '@/lib/motion'
 import MermaidDiagram from '@/components/MermaidDiagram'
 
 const repoBase = 'https://github.com/Pinklove4/My_Portfolio/blob/main/assets/lab'
-const evidenceImageBase = 'https://raw.githubusercontent.com/Pinklove4/My_Portfolio/main/assets/lab/screenshots'
+const evidenceImageBase = '/lab/screenshots'
 
 const quickStats = [
   { label: 'Segments Tested', value: '5 VLANs' },

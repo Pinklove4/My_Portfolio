@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" fill="none">
+  <rect width="1280" height="720" rx="24" fill="#08131d"/>
+  <rect x="40" y="40" width="1200" height="640" rx="18" fill="#0d1b28" stroke="#1b3747"/>
+  <text x="76" y="94" fill="#e8f2fc" font-size="26" font-family="Segoe UI, Arial">Managed Switch VLAN Configuration</text>
+  <rect x="76" y="140" width="1128" height="86" rx="14" fill="#0f2234"/>
+  <text x="108" y="193" fill="#5eead4" font-size="20" font-family="Consolas, monospace">Gi1/0/1 trunk allowed vlan 10,20,30,40,50</text>
+  <rect x="76" y="248" width="1128" height="86" rx="14" fill="#0f2234"/>
+  <text x="108" y="301" fill="#9ec8f5" font-size="20" font-family="Consolas, monospace">Gi1/0/12 access vlan 50 description analyst-workstation</text>
+  <rect x="76" y="356" width="1128" height="86" rx="14" fill="#0f2234"/>
+  <text x="108" y="409" fill="#9ec8f5" font-size="20" font-family="Consolas, monospace">Gi1/0/20 access vlan 40 description iot-test-device</text>
+  <text x="76" y="618" fill="#8fb7da" font-size="18" font-family="Segoe UI, Arial">Segmentation and trunk tagging review evidence from switch configuration.</text>
+</svg>
