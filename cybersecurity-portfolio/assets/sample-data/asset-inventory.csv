@@ -1,0 +1,4 @@
+asset_id,hostname,os,criticality,owner,network_zone
+A-001,WEB-APP-01,Ubuntu 22.04,High,Web Team,DMZ
+A-002,DB-SRV-01,Windows Server 2022,Critical,DB Team,Server VLAN
+A-003,DC01,Windows Server 2022,Critical,Identity Team,Core VLAN

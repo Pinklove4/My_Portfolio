@@ -1,0 +1,4 @@
+asset_id,asset_name,severity,cvss,finding,status,owner,target_date
+A-001,WEB-APP-01,Critical,9.8,CVE-2024-12345,In Progress,Web Team,2026-06-03
+A-002,DB-SRV-01,High,7.8,Weak TLS Cipher,Open,DB Team,2026-06-08
+A-003,FS-01,Medium,6.1,SMB Signing Disabled,Open,Infra Team,2026-06-10

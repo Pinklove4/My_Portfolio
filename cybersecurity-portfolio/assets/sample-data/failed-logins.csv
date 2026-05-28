@@ -1,0 +1,4 @@
+timestamp,username,source_ip,host,result
+2026-05-28T14:01:10Z,j.smith,203.0.113.45,WIN-CLIENT01,failed
+2026-05-28T14:01:48Z,j.smith,203.0.113.45,WIN-CLIENT01,failed
+2026-05-28T14:02:31Z,svc-backup,203.0.113.45,WIN-CLIENT01,failed

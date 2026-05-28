@@ -1,0 +1,18 @@
+[
+  {
+    "eventTime": "2026-05-28T11:05:22Z",
+    "eventSource": "iam.amazonaws.com",
+    "eventName": "AttachUserPolicy",
+    "userIdentity": {"userName": "cloud-admin-lab"},
+    "requestParameters": {
+      "userName": "analyst-test",
+      "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+    }
+  },
+  {
+    "eventTime": "2026-05-28T11:12:49Z",
+    "eventSource": "iam.amazonaws.com",
+    "eventName": "CreateAccessKey",
+    "userIdentity": {"userName": "analyst-test"}
+  }
+]

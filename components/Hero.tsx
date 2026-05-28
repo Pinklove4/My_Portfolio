@@ -5,10 +5,10 @@ import { ArrowRight, Mail, Github, Linkedin, Shield, Network, Cloud } from 'luci
 import { stagger, fadeUp, fadeIn } from '@/lib/motion'
 
 const stats = [
-  { label: 'Technical Projects', value: '8+' },
+  { label: 'Technical Projects', value: '30+' },
   { label: 'Technologies Mastered', value: '20+' },
   { label: 'Cloud Platforms', value: '3' },
-  { label: 'Security Tools', value: '10+' },
+  { label: 'Security Tools', value: '15+' },
 ]
 
 export default function Hero() {
@@ -77,7 +77,7 @@ export default function Hero() {
             <div className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-teal-300 animate-pulse" />
               <span className="text-xs font-bold tracking-widest uppercase text-teal-300 font-sora">
-                Network Engineer Portfolio
+                Cybersecurity Analyst / SOC Analyst Portfolio
               </span>
             </div>
             <div className="h-px flex-1 max-w-[80px] bg-gradient-to-r from-teal-300/50 to-transparent" />
@@ -97,7 +97,7 @@ export default function Hero() {
             variants={fadeUp}
             className="font-sora font-bold text-2xl sm:text-3xl text-brand-light mb-4"
           >
-            Network Engineer
+            Cybersecurity Analyst / SOC Analyst
           </motion.h2>
 
           {/* Subtitle */}
@@ -105,19 +105,19 @@ export default function Hero() {
             variants={fadeUp}
             className="text-lg text-brand-muted leading-relaxed mb-8 max-w-xl"
           >
-            Specializing in{' '}
-            <span className="text-teal-300 font-semibold">Secure Infrastructure</span>,{' '}
-            <span className="text-sky-400 font-semibold">Cybersecurity</span>, and{' '}
-            <span className="text-teal-300 font-semibold">Cloud Operations</span>.{' '}
-            Building resilient, scalable, and future-ready networks.
+            Hands-on cybersecurity portfolio focused on{' '}
+            <span className="text-teal-300 font-semibold">SIEM monitoring</span>,{' '}
+            <span className="text-sky-400 font-semibold">incident response</span>,{' '}
+            <span className="text-teal-300 font-semibold">vulnerability management</span>,{' '}
+            <span className="text-sky-400 font-semibold">Active Directory security</span>,{' '}
+            <span className="text-teal-300 font-semibold">cloud IAM</span>, packet analysis, and security automation.
           </motion.p>
 
           <motion.p
             variants={fadeUp}
             className="text-sm text-brand-muted/90 mb-8 max-w-2xl"
           >
-            GRC-aware operations: audit-friendly documentation, Nessus remediation tracking,
-            and SIEM alert triage.
+            All projects are based on ethical home-lab simulations and realistic defensive workflows.
           </motion.p>
 
           {/* CTAs */}

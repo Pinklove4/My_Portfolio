@@ -1,0 +1,3 @@
+﻿2026-05-28T14:09:10Z source=wazuh rule=ssh-bruteforce level=12 host=ubuntu-lab
+2026-05-28T14:12:22Z source=splunk rule=failed_then_success severity=high host=dc01
+2026-05-28T14:14:41Z source=cloudtrail event=AttachUserPolicy risk=high identity=analyst-test

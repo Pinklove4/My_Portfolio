@@ -1,0 +1,4 @@
+﻿PS C:\lab> Get-Content .\sample.log -Tail 3
+2026-05-28T14:01:10Z ... auth_failure
+2026-05-28T14:02:34Z ... process_alert
+2026-05-28T14:05:09Z ... firewall_deny

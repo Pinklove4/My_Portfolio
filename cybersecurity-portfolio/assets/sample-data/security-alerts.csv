@@ -1,0 +1,4 @@
+alert_id,source,severity,rule,entity,status
+SOC-001,Wazuh,High,SSH brute-force detected,ubuntu-lab-01,Closed
+SOC-002,Splunk,Medium,Failed then successful login correlation,dc01,Investigating
+SOC-003,Defender,High,Suspicious PowerShell commandline,WIN-CLIENT01,Open

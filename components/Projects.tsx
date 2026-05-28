@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ExternalLink, Github, ChevronDown, ChevronUp, Shield, Network, Cloud, Server, Monitor, Lock, BarChart3 } from 'lucide-react'
+import { ExternalLink, Github, ChevronDown, ChevronUp, Shield, Network, Cloud, Server, Monitor, Lock, BarChart3, Search, FileText, Radar, ShieldCheck, HardDrive, Activity } from 'lucide-react'
 import { stagger, fadeUp, scaleIn } from '@/lib/motion'
 
 const projects = [
@@ -133,43 +133,352 @@ const projects = [
   },
 ]
 
-const additionalProjects = [
-  { title: 'Endpoint Detection and Response Lab', slug: 'endpoint-detection-response-lab', domain: 'SOC and Endpoint Security' },
-  { title: 'Firewall Administration Lab', slug: 'firewall-administration-lab', domain: 'Network Defense' },
-  { title: 'SIEM Correlation Rule Project', slug: 'siem-correlation-rule-project', domain: 'Detection Engineering' },
-  { title: 'Linux Security Hardening Project', slug: 'linux-security-hardening-project', domain: 'System Administration and Hardening' },
-  { title: 'Windows Security Hardening Project', slug: 'windows-security-hardening-project', domain: 'System Administration and Hardening' },
-  { title: 'Secure Network Architecture Project', slug: 'secure-network-architecture-project', domain: 'Network Defense' },
-  { title: 'Email Threat Analysis Lab', slug: 'email-threat-analysis-lab', domain: 'SOC and Incident Response' },
-  { title: 'Threat Intelligence Platform Project', slug: 'threat-intelligence-platform-project', domain: 'Threat Intelligence and Hunting' },
-  { title: 'Security Dashboard Visualization Project', slug: 'security-dashboard-visualization-project', domain: 'SOC Operations and Metrics' },
-  { title: 'Password Attack Detection Lab', slug: 'password-attack-detection-lab', domain: 'IAM and Identity Monitoring' },
-  { title: 'Ransomware Investigation Project', slug: 'ransomware-investigation-project', domain: 'SOC and Incident Response' },
-  { title: 'Data Loss Prevention Lab', slug: 'data-loss-prevention-lab', domain: 'Endpoint Security and Compliance' },
-  { title: 'Web Application Security Testing Project', slug: 'web-application-security-testing-project', domain: 'Application Security' },
-  { title: 'Secure File Server Project', slug: 'secure-file-server-project', domain: 'System Administration and Hardening' },
-  { title: 'DNS Threat Monitoring Lab', slug: 'dns-threat-monitoring-lab', domain: 'Threat Intelligence and Hunting' },
-  { title: 'Cloud Incident Response Project', slug: 'cloud-incident-response-project', domain: 'Cloud Security and IAM' },
-  { title: 'Container Security Project', slug: 'container-security-project', domain: 'Cloud Security and IAM' },
-  { title: 'Identity and Access Management Review', slug: 'identity-access-management-review', domain: 'Cloud Security and IAM' },
-  { title: 'Mobile Device Security Project', slug: 'mobile-device-security-project', domain: 'Endpoint Security and Compliance' },
-  { title: 'Insider Threat Investigation', slug: 'insider-threat-investigation', domain: 'Threat Intelligence and Hunting' },
-  { title: 'Patch Management Program', slug: 'patch-management-program', domain: 'Vulnerability Management' },
-  { title: 'Malware Analysis Basics Project', slug: 'malware-analysis-basics-project', domain: 'SOC and Incident Response' },
-  { title: 'Secure Backup and Recovery Lab', slug: 'secure-backup-recovery-lab', domain: 'Vulnerability Management' },
-  { title: 'SOC Ticketing Workflow Project', slug: 'soc-ticketing-workflow-project', domain: 'SOC Operations and Metrics' },
-  { title: 'Cybersecurity Governance Project', slug: 'cybersecurity-governance-project', domain: 'Endpoint Security and Compliance' },
+const repoBase = 'https://github.com/Pinklove4/My_Portfolio/tree/main/cybersecurity-portfolio'
+
+const labCategories = [
+  { key: 'soc-endpoint-security', label: 'SOC & Endpoint Security', icon: Shield },
+  { key: 'network-defense', label: 'Network Defense', icon: Network },
+  { key: 'detection-engineering', label: 'Detection Engineering', icon: Radar },
+  { key: 'system-hardening', label: 'System Hardening', icon: ShieldCheck },
+  { key: 'incident-response', label: 'Incident Response', icon: Activity },
+  { key: 'threat-intelligence-hunting', label: 'Threat Intelligence & Hunting', icon: Monitor },
+  { key: 'soc-operations-metrics', label: 'SOC Operations & Metrics', icon: BarChart3 },
+  { key: 'iam-identity-monitoring', label: 'IAM & Identity Monitoring', icon: Lock },
+  { key: 'application-security', label: 'Application Security', icon: Server },
+  { key: 'cloud-security-iam', label: 'Cloud Security & IAM', icon: Cloud },
+  { key: 'vulnerability-management', label: 'Vulnerability Management', icon: Shield },
+  { key: 'governance-risk-compliance', label: 'Governance, Risk & Compliance', icon: FileText },
+] as const
+
+type ExpandedLab = {
+  title: string
+  slug: string
+  categoryKey: (typeof labCategories)[number]['key']
+  description: string
+  technologies: string[]
+  skills: string[]
+  difficulty: 'Beginner' | 'Beginner-Intermediate' | 'Intermediate'
+  realism: string
+  metrics: {
+    logs: number
+    alerts: number
+    systems: number
+    diagrams: number
+  }
+  featured?: boolean
+  caseStudy?: string
+}
+
+const expandedLabs: ExpandedLab[] = [
+  {
+    title: 'Endpoint Detection and Response Lab',
+    slug: 'endpoint-detection-response-lab',
+    categoryKey: 'soc-endpoint-security',
+    description: 'Practiced analyzing simulated endpoint alerts, suspicious process behavior, and quarantine workflow decisions.',
+    technologies: ['Microsoft Defender', 'Wazuh', 'Sysmon', 'PowerShell'],
+    skills: ['Alert Triage', 'Endpoint Monitoring', 'Incident Documentation'],
+    difficulty: 'Beginner-Intermediate',
+    realism: 'Practice Investigation',
+    metrics: { logs: 4, alerts: 3, systems: 2, diagrams: 1 },
+    featured: true,
+  },
+  {
+    title: 'Firewall Administration Lab',
+    slug: 'firewall-administration-lab',
+    categoryKey: 'network-defense',
+    description: 'Configured defensive firewall rules and reviewed deny logs for suspicious outbound traffic patterns.',
+    technologies: ['pfSense', 'Suricata', 'Wireshark'],
+    skills: ['Firewall Rules', 'Network Monitoring', 'Traffic Validation'],
+    difficulty: 'Beginner',
+    realism: 'Security Hardening Lab',
+    metrics: { logs: 3, alerts: 2, systems: 2, diagrams: 1 },
+    featured: true,
+  },
+  {
+    title: 'Secure Network Architecture Project',
+    slug: 'secure-network-architecture-project',
+    categoryKey: 'network-defense',
+    description: 'Built segmented network zones in a home lab and tested controlled trust pathways between systems.',
+    technologies: ['VLANs', 'pfSense', 'Nmap', 'VPN'],
+    skills: ['Segmentation', 'ACL Testing', 'Network Defense'],
+    difficulty: 'Intermediate',
+    realism: 'Packet Analysis Walkthrough',
+    metrics: { logs: 2, alerts: 2, systems: 4, diagrams: 2 },
+    featured: true,
+    caseStudy: `${repoBase}/case-studies/enterprise-vlan-segmentation-lab.md`,
+  },
+  {
+    title: 'SIEM Correlation Rule Project',
+    slug: 'siem-correlation-rule-project',
+    categoryKey: 'detection-engineering',
+    description: 'Created sample detection logic that correlated multiple events and reduced noisy one-off alerts.',
+    technologies: ['Splunk', 'Wazuh', 'Python'],
+    skills: ['Detection Logic', 'False Positive Tuning', 'SIEM Queries'],
+    difficulty: 'Beginner-Intermediate',
+    realism: 'Detection Tuning Exercise',
+    metrics: { logs: 5, alerts: 4, systems: 3, diagrams: 1 },
+    featured: true,
+    caseStudy: `${repoBase}/case-studies/siem-threat-detection-dashboard.md`,
+  },
+  {
+    title: 'Linux Security Hardening Project',
+    slug: 'linux-security-hardening-project',
+    categoryKey: 'system-hardening',
+    description: 'Hardened Linux authentication and logging settings and validated defensive controls in simulation.',
+    technologies: ['Ubuntu', 'Fail2Ban', 'auditd', 'OpenSSH'],
+    skills: ['Linux Hardening', 'Auth Log Review', 'Control Validation'],
+    difficulty: 'Beginner-Intermediate',
+    realism: 'Security Hardening Lab',
+    metrics: { logs: 3, alerts: 2, systems: 1, diagrams: 1 },
+  },
+  {
+    title: 'Windows Security Hardening Project',
+    slug: 'windows-security-hardening-project',
+    categoryKey: 'system-hardening',
+    description: 'Applied baseline hardening policies and reviewed Windows security event behavior before and after changes.',
+    technologies: ['Windows Defender', 'BitLocker', 'Event Viewer'],
+    skills: ['Windows Hardening', 'Policy Review', 'Endpoint Defense'],
+    difficulty: 'Beginner',
+    realism: 'Security Hardening Lab',
+    metrics: { logs: 3, alerts: 2, systems: 1, diagrams: 1 },
+  },
+  {
+    title: 'Secure File Server Project',
+    slug: 'secure-file-server-project',
+    categoryKey: 'system-hardening',
+    description: 'Practiced SMB permission design and file access logging in a simulated role-based access setup.',
+    technologies: ['Windows Server', 'SMB ACLs', 'PowerShell'],
+    skills: ['Access Control', 'Audit Logging', 'RBAC Basics'],
+    difficulty: 'Beginner-Intermediate',
+    realism: 'Simulated Home Lab',
+    metrics: { logs: 2, alerts: 1, systems: 1, diagrams: 1 },
+  },
+  {
+    title: 'Email Threat Analysis Lab',
+    slug: 'email-threat-analysis-lab',
+    categoryKey: 'incident-response',
+    description: 'Investigated simulated phishing alerts using header review and attachment triage workflow notes.',
+    technologies: ['Defender for Office Concepts', 'Splunk', 'Sandbox Notes'],
+    skills: ['Phishing Analysis', 'Triage Workflow', 'Analyst Notes'],
+    difficulty: 'Beginner',
+    realism: 'Practice Investigation',
+    metrics: { logs: 3, alerts: 3, systems: 2, diagrams: 1 },
+  },
+  {
+    title: 'Ransomware Investigation Project',
+    slug: 'ransomware-investigation-project',
+    categoryKey: 'incident-response',
+    description: 'Worked through a simulated ransomware-style timeline and documented containment and recovery actions.',
+    technologies: ['Wazuh', 'Sysmon', 'Windows Logs'],
+    skills: ['Incident Timeline', 'Containment Steps', 'Recovery Notes'],
+    difficulty: 'Beginner-Intermediate',
+    realism: 'Practice Investigation',
+    metrics: { logs: 4, alerts: 3, systems: 2, diagrams: 1 },
+  },
+  {
+    title: 'Malware Analysis Basics Project',
+    slug: 'malware-analysis-basics-project',
+    categoryKey: 'incident-response',
+    description: 'Practiced beginner static triage on simulated suspicious files and extracted basic IOC notes.',
+    technologies: ['PowerShell', 'Hash Tools', 'Sandbox Workflow'],
+    skills: ['File Triage', 'IOC Extraction', 'Documentation'],
+    difficulty: 'Beginner',
+    realism: 'Simulated Home Lab',
+    metrics: { logs: 2, alerts: 2, systems: 1, diagrams: 1 },
+  },
+  {
+    title: 'Threat Intelligence Platform Project',
+    slug: 'threat-intelligence-platform-project',
+    categoryKey: 'threat-intelligence-hunting',
+    description: 'Organized sample IOC feeds and mapped indicators to simple detection use cases.',
+    technologies: ['MISP-style Workflow', 'CSV IOC Feeds', 'Splunk'],
+    skills: ['IOC Management', 'ATT&CK Mapping', 'Detection Context'],
+    difficulty: 'Beginner-Intermediate',
+    realism: 'Detection Tuning Exercise',
+    metrics: { logs: 2, alerts: 2, systems: 2, diagrams: 1 },
+  },
+  {
+    title: 'DNS Threat Monitoring Lab',
+    slug: 'dns-threat-monitoring-lab',
+    categoryKey: 'threat-intelligence-hunting',
+    description: 'Reviewed DNS logs for suspicious high-entropy query behavior in controlled packet captures.',
+    technologies: ['Wireshark', 'DNS Logs', 'Splunk'],
+    skills: ['DNS Analysis', 'Packet Review', 'Threat Hunting'],
+    difficulty: 'Beginner-Intermediate',
+    realism: 'Packet Analysis Walkthrough',
+    metrics: { logs: 4, alerts: 2, systems: 2, diagrams: 1 },
+  },
+  {
+    title: 'Insider Threat Investigation',
+    slug: 'insider-threat-investigation',
+    categoryKey: 'threat-intelligence-hunting',
+    description: 'Compared simulated baseline user activity against unusual file access patterns and documented findings.',
+    technologies: ['SIEM Logs', 'PowerShell', 'File Access Audits'],
+    skills: ['Behavior Analysis', 'Log Correlation', 'Risk Notes'],
+    difficulty: 'Intermediate',
+    realism: 'Practice Investigation',
+    metrics: { logs: 3, alerts: 2, systems: 2, diagrams: 1 },
+  },
+  {
+    title: 'Security Dashboard Visualization Project',
+    slug: 'security-dashboard-visualization-project',
+    categoryKey: 'soc-operations-metrics',
+    description: 'Built SOC metric views to track alert trends, queue health, and triage performance in a lab.',
+    technologies: ['Splunk Dashboards', 'CSV Metrics'],
+    skills: ['Security Metrics', 'Data Visualization', 'SOC Reporting'],
+    difficulty: 'Beginner-Intermediate',
+    realism: 'Simulated Home Lab',
+    metrics: { logs: 3, alerts: 3, systems: 2, diagrams: 1 },
+  },
+  {
+    title: 'SOC Ticketing Workflow Project',
+    slug: 'soc-ticketing-workflow-project',
+    categoryKey: 'soc-operations-metrics',
+    description: 'Simulated analyst ticket lifecycle from alert triage to escalation and closure notes.',
+    technologies: ['Jira/ServiceNow Workflow', 'SIEM Alerts'],
+    skills: ['Ticket Handling', 'Escalation Workflow', 'Analyst Communication'],
+    difficulty: 'Beginner',
+    realism: 'Practice Investigation',
+    metrics: { logs: 2, alerts: 3, systems: 1, diagrams: 1 },
+  },
+  {
+    title: 'Password Attack Detection Lab',
+    slug: 'password-attack-detection-lab',
+    categoryKey: 'iam-identity-monitoring',
+    description: 'Analyzed simulated failed login bursts and tested lockout policy tuning for practical detection.',
+    technologies: ['Active Directory Logs', 'Splunk', 'PowerShell'],
+    skills: ['Identity Monitoring', 'Auth Analysis', 'Policy Validation'],
+    difficulty: 'Beginner-Intermediate',
+    realism: 'Detection Tuning Exercise',
+    metrics: { logs: 4, alerts: 3, systems: 2, diagrams: 1 },
+  },
+  {
+    title: 'Data Loss Prevention Lab',
+    slug: 'data-loss-prevention-lab',
+    categoryKey: 'iam-identity-monitoring',
+    description: 'Practiced monitoring simulated USB exfiltration indicators and documented policy enforcement results.',
+    technologies: ['DLP Policy Simulation', 'Endpoint Logs', 'Splunk'],
+    skills: ['DLP Monitoring', 'Policy Testing', 'Evidence Notes'],
+    difficulty: 'Beginner-Intermediate',
+    realism: 'Practice Investigation',
+    metrics: { logs: 3, alerts: 2, systems: 2, diagrams: 1 },
+  },
+  {
+    title: 'Mobile Device Security Project',
+    slug: 'mobile-device-security-project',
+    categoryKey: 'iam-identity-monitoring',
+    description: 'Reviewed simulated BYOD compliance signals and tested basic conditional access decision logic.',
+    technologies: ['MDM Concepts', 'Conditional Access Notes', 'SIEM Logs'],
+    skills: ['Device Compliance', 'Identity Controls', 'Monitoring'],
+    difficulty: 'Beginner',
+    realism: 'Simulated Home Lab',
+    metrics: { logs: 2, alerts: 2, systems: 1, diagrams: 1 },
+  },
+  {
+    title: 'Cybersecurity Governance Project',
+    slug: 'cybersecurity-governance-project',
+    categoryKey: 'governance-risk-compliance',
+    description: 'Created practical security policy and risk register artifacts for home-lab governance practice.',
+    technologies: ['Policy Templates', 'Risk Register', 'Security Awareness Plan'],
+    skills: ['Security Documentation', 'Risk Tracking', 'Control Ownership'],
+    difficulty: 'Beginner',
+    realism: 'Simulated Home Lab',
+    metrics: { logs: 1, alerts: 1, systems: 1, diagrams: 1 },
+  },
+  {
+    title: 'Web Application Security Testing Project',
+    slug: 'web-application-security-testing-project',
+    categoryKey: 'application-security',
+    description: 'Tested simulated OWASP-style flaws and documented defensive recommendations for beginner appsec practice.',
+    technologies: ['Burp Suite Community', 'OWASP Test Lab', 'HTTP Logs'],
+    skills: ['Web Security Testing', 'Input Validation Review', 'Findings Reporting'],
+    difficulty: 'Intermediate',
+    realism: 'Practice Investigation',
+    metrics: { logs: 2, alerts: 2, systems: 2, diagrams: 1 },
+  },
+  {
+    title: 'Cloud Incident Response Project',
+    slug: 'cloud-incident-response-project',
+    categoryKey: 'cloud-security-iam',
+    description: 'Investigated simulated IAM misuse indicators in cloud audit logs and tested key rotation response steps.',
+    technologies: ['AWS CloudTrail', 'IAM Review', 'Splunk'],
+    skills: ['Cloud Log Review', 'IAM Incident Triage', 'Remediation Validation'],
+    difficulty: 'Beginner-Intermediate',
+    realism: 'Practice Investigation',
+    metrics: { logs: 3, alerts: 3, systems: 2, diagrams: 1 },
+    caseStudy: `${repoBase}/case-studies/cloud-iam-security-lab.md`,
+  },
+  {
+    title: 'Container Security Project',
+    slug: 'container-security-project',
+    categoryKey: 'cloud-security-iam',
+    description: 'Scanned simulated container images and reviewed basic runtime hardening controls in lab deployments.',
+    technologies: ['Docker', 'Image Scanning', 'Kubernetes Basics'],
+    skills: ['Container Hardening', 'Vulnerability Review', 'Cloud Security Basics'],
+    difficulty: 'Beginner-Intermediate',
+    realism: 'Security Hardening Lab',
+    metrics: { logs: 2, alerts: 2, systems: 2, diagrams: 1 },
+  },
+  {
+    title: 'Identity and Access Management Review',
+    slug: 'identity-access-management-review',
+    categoryKey: 'cloud-security-iam',
+    description: 'Performed least-privilege review of simulated IAM and RBAC setups with practical remediation notes.',
+    technologies: ['AWS IAM', 'Azure RBAC Concepts', 'PowerShell'],
+    skills: ['Least Privilege', 'Access Review', 'Cloud IAM'],
+    difficulty: 'Beginner-Intermediate',
+    realism: 'Detection Tuning Exercise',
+    metrics: { logs: 2, alerts: 2, systems: 2, diagrams: 1 },
+    caseStudy: `${repoBase}/case-studies/cloud-iam-security-lab.md`,
+  },
+  {
+    title: 'Patch Management Program',
+    slug: 'patch-management-program',
+    categoryKey: 'vulnerability-management',
+    description: 'Tracked patch gaps, tested remediation windows, and validated improved vulnerability posture in simulation.',
+    technologies: ['Nessus/OpenVAS Outputs', 'Patch Tracker CSV', 'PowerShell'],
+    skills: ['Patch Validation', 'Risk Prioritization', 'Vulnerability Tracking'],
+    difficulty: 'Beginner-Intermediate',
+    realism: 'Simulated Home Lab',
+    metrics: { logs: 2, alerts: 2, systems: 3, diagrams: 1 },
+    caseStudy: `${repoBase}/case-studies/vulnerability-management-lab.md`,
+  },
+  {
+    title: 'Secure Backup and Recovery Lab',
+    slug: 'secure-backup-recovery-lab',
+    categoryKey: 'vulnerability-management',
+    description: 'Practiced backup validation and restore testing in simulated disruption scenarios.',
+    technologies: ['Backup Workflow Notes', 'Restore Drills', 'Recovery Logs'],
+    skills: ['Recovery Testing', 'Resilience Planning', 'Documentation'],
+    difficulty: 'Beginner',
+    realism: 'Simulated Home Lab',
+    metrics: { logs: 2, alerts: 1, systems: 2, diagrams: 1 },
+  },
 ]
 
 export default function Projects() {
   const [expanded, setExpanded] = useState<number | null>(null)
-  const groupedAdditionalProjects = additionalProjects.reduce<Record<string, typeof additionalProjects>>((acc, project) => {
-    if (!acc[project.domain]) {
-      acc[project.domain] = []
-    }
-    acc[project.domain].push(project)
-    return acc
-  }, {})
+  const [labSearch, setLabSearch] = useState('')
+  const [labCategoryFilter, setLabCategoryFilter] = useState('all')
+  const [labSkillFilter, setLabSkillFilter] = useState('all')
+
+  const skillOptions = Array.from(new Set(expandedLabs.flatMap((lab) => lab.skills))).sort()
+
+  const filteredLabs = expandedLabs.filter((lab) => {
+    const matchesCategory = labCategoryFilter === 'all' || lab.categoryKey === labCategoryFilter
+    const matchesSkill = labSkillFilter === 'all' || lab.skills.some((skill) => skill === labSkillFilter)
+    const query = labSearch.trim().toLowerCase()
+    const matchesSearch =
+      query.length === 0
+      || lab.title.toLowerCase().includes(query)
+      || lab.description.toLowerCase().includes(query)
+      || lab.technologies.some((tech) => tech.toLowerCase().includes(query))
+      || lab.skills.some((skill) => skill.toLowerCase().includes(query))
+
+    return matchesCategory && matchesSkill && matchesSearch
+  })
+
+  const featuredLabs = expandedLabs.filter((lab) => lab.featured)
 
   const renderMeter = (value: number, max: number, filledClass: string) => {
     const filledSegments = Math.max(1, Math.round((value / max) * 10))
@@ -417,46 +726,212 @@ export default function Projects() {
         >
           <motion.div variants={fadeUp} className="mb-6">
             <p className="section-label mb-2">Expanded Labs</p>
-            <h3 className="font-sora text-2xl lg:text-3xl text-brand-light mb-2">
-              25 Additional Cybersecurity Projects
+            <h3 className="font-sora text-2xl lg:text-3xl text-brand-light mb-3">
+              Expanded Labs: Practical Cybersecurity Skill Building
             </h3>
-            <p className="text-brand-muted text-sm lg:text-base max-w-3xl">
-              Organized by domain to reflect practical SOC, cloud, endpoint, vulnerability management, and detection engineering experience.
+            <p className="text-brand-muted text-sm lg:text-base max-w-4xl leading-relaxed">
+              These expanded labs demonstrate practical hands-on learning across SOC operations, network defense, vulnerability management, cloud security, endpoint monitoring, incident response, and security documentation. All projects are simulated and built in ethical home-lab environments.
             </p>
           </motion.div>
 
-          <motion.div variants={fadeUp} className="grid md:grid-cols-2 gap-5">
-            {Object.entries(groupedAdditionalProjects).map(([domain, domainProjects]) => (
-              <div key={domain} className="rounded-2xl border border-navy-700/40 bg-navy-950/35 p-4">
-                <h4 className="text-sm font-bold uppercase tracking-wide text-teal-300 mb-3">{domain}</h4>
-                <ul className="space-y-2">
-                  {domainProjects.map((project) => (
-                    <li key={project.slug}>
-                      <a
-                        href={`https://github.com/Pinklove4/My_Portfolio/tree/main/cybersecurity-portfolio/${project.slug}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group inline-flex items-start gap-2 text-sm text-brand-muted hover:text-sky-300 transition-colors"
-                      >
-                        <ExternalLink className="w-3.5 h-3.5 mt-0.5 shrink-0 text-sky-400 group-hover:text-sky-300" />
-                        <span>{project.title}</span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+          <motion.div variants={fadeUp} className="rounded-2xl border border-navy-700/40 bg-navy-950/35 p-4 lg:p-5 mb-6">
+            <div className="flex flex-col lg:flex-row lg:items-center gap-3 mb-4">
+              <div className="relative flex-1">
+                <Search className="w-4 h-4 text-brand-muted absolute left-3 top-1/2 -translate-y-1/2" />
+                <input
+                  value={labSearch}
+                  onChange={(event) => setLabSearch(event.target.value)}
+                  placeholder="Search labs by title, skill, or technology"
+                  className="w-full bg-navy-900/70 border border-navy-700/50 rounded-xl pl-10 pr-3 py-2.5 text-sm text-brand-light placeholder:text-brand-muted/70 focus:outline-none focus:border-teal-300/50"
+                />
               </div>
-            ))}
+              <select
+                value={labCategoryFilter}
+                onChange={(event) => setLabCategoryFilter(event.target.value)}
+                className="bg-navy-900/70 border border-navy-700/50 rounded-xl px-3 py-2.5 text-sm text-brand-light focus:outline-none focus:border-teal-300/50"
+              >
+                <option value="all">All Categories</option>
+                {labCategories.map((category) => (
+                  <option key={category.key} value={category.key}>{category.label}</option>
+                ))}
+              </select>
+              <select
+                value={labSkillFilter}
+                onChange={(event) => setLabSkillFilter(event.target.value)}
+                className="bg-navy-900/70 border border-navy-700/50 rounded-xl px-3 py-2.5 text-sm text-brand-light focus:outline-none focus:border-teal-300/50"
+              >
+                <option value="all">All Skills</option>
+                {skillOptions.map((skill) => (
+                  <option key={skill} value={skill}>{skill}</option>
+                ))}
+              </select>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-[11px] uppercase tracking-wide text-brand-muted font-semibold">Quick Jump:</span>
+              {labCategories.map((category) => (
+                <a
+                  key={category.key}
+                  href={`#expanded-lab-${category.key}`}
+                  className="text-xs px-2.5 py-1 rounded-full border border-navy-700/50 text-brand-muted hover:text-sky-300 hover:border-sky-400/40 transition-colors"
+                >
+                  {category.label}
+                </a>
+              ))}
+            </div>
           </motion.div>
+
+          <motion.div variants={fadeUp} className="mb-8">
+            <div className="flex items-center justify-between mb-3">
+              <h4 className="font-sora text-lg text-brand-light">Featured Labs</h4>
+              <span className="text-xs text-brand-muted">Focused starter projects for recruiter review</span>
+            </div>
+            <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-3">
+              {featuredLabs.map((lab) => (
+                <div key={lab.slug} className="rounded-xl border border-teal-300/20 bg-teal-300/5 p-3">
+                  <div className="text-[10px] uppercase tracking-wide text-teal-300 mb-1">Simulated Home Lab</div>
+                  <h5 className="text-sm font-semibold text-brand-light leading-snug mb-2">{lab.title}</h5>
+                  <p className="text-xs text-brand-muted line-clamp-3">{lab.description}</p>
+                  <a
+                    href={`${repoBase}/expanded-labs/${lab.categoryKey}/${lab.slug}/README.md`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-1 text-xs text-sky-400 hover:text-sky-300"
+                  >
+                    <FileText className="w-3.5 h-3.5" />
+                    Open README
+                  </a>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <div className="space-y-8">
+            {labCategories.map((category) => {
+              const CategoryIcon = category.icon
+              const categoryLabs = filteredLabs.filter((lab) => lab.categoryKey === category.key)
+
+              if (categoryLabs.length === 0) {
+                return null
+              }
+
+              return (
+                <motion.div
+                  key={category.key}
+                  variants={fadeUp}
+                  id={`expanded-lab-${category.key}`}
+                  className="rounded-2xl border border-navy-700/40 bg-navy-950/25 p-4 lg:p-5"
+                >
+                  <div className="flex items-center justify-between gap-3 mb-4">
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-8 h-8 rounded-lg bg-sky-400/10 border border-sky-400/25 flex items-center justify-center">
+                        <CategoryIcon className="w-4 h-4 text-sky-400" />
+                      </span>
+                      <h4 className="font-sora text-lg text-brand-light">{category.label}</h4>
+                    </div>
+                    <span className="text-xs text-brand-muted">{categoryLabs.length} labs</span>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+                    {categoryLabs.map((lab) => (
+                      <motion.article
+                        key={lab.slug}
+                        variants={scaleIn}
+                        className="rounded-xl border border-navy-700/45 bg-navy-900/30 p-4 hover:border-teal-300/35 hover:bg-navy-900/45 transition-all duration-200"
+                      >
+                        <div className="flex items-start justify-between gap-2 mb-2">
+                          <h5 className="text-sm font-semibold text-brand-light leading-snug">{lab.title}</h5>
+                          <span className="text-[10px] px-2 py-0.5 rounded-full bg-navy-800 border border-navy-700 text-brand-muted whitespace-nowrap">
+                            {lab.difficulty}
+                          </span>
+                        </div>
+
+                        <p className="text-xs text-brand-muted leading-relaxed mb-3">{lab.description}</p>
+
+                        <div className="flex flex-wrap gap-1.5 mb-3">
+                          <span className="text-[10px] px-2 py-0.5 rounded-full border border-teal-300/30 bg-teal-300/10 text-teal-300">
+                            {lab.realism}
+                          </span>
+                          <span className="text-[10px] px-2 py-0.5 rounded-full border border-sky-400/30 bg-sky-400/10 text-sky-400">
+                            Simulated Home Lab
+                          </span>
+                        </div>
+
+                        <div className="text-[11px] text-brand-muted mb-2">Technologies:</div>
+                        <div className="flex flex-wrap gap-1.5 mb-3">
+                          {lab.technologies.map((tech) => (
+                            <span key={tech} className="skill-tag text-[10px]">{tech}</span>
+                          ))}
+                        </div>
+
+                        <div className="text-[11px] text-brand-muted mb-2">Skill Tags:</div>
+                        <div className="flex flex-wrap gap-1.5 mb-3">
+                          {lab.skills.map((skill) => (
+                            <span key={skill} className="text-[10px] px-2 py-0.5 rounded-full border border-navy-600 text-brand-muted">{skill}</span>
+                          ))}
+                        </div>
+
+                        <div className="text-[10px] text-brand-muted border border-navy-700/45 rounded-lg p-2 mb-3 bg-navy-950/40">
+                          Logs reviewed: {lab.metrics.logs} | Alerts analyzed: {lab.metrics.alerts} | Systems hardened: {lab.metrics.systems} | Diagrams created: {lab.metrics.diagrams}
+                        </div>
+
+                        <div className="flex flex-wrap gap-2">
+                          <a
+                            href={`${repoBase}/expanded-labs/${lab.categoryKey}/${lab.slug}/README.md`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-xs text-sky-400 hover:text-sky-300"
+                          >
+                            <FileText className="w-3.5 h-3.5" />
+                            README
+                          </a>
+                          <a
+                            href={`${repoBase}/expanded-labs/assets/screenshots/${lab.slug}-mock-dashboard.svg`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-xs text-brand-muted hover:text-teal-300"
+                          >
+                            <HardDrive className="w-3.5 h-3.5" />
+                            Mock Screenshot
+                          </a>
+                          {lab.caseStudy && (
+                            <a
+                              href={lab.caseStudy}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-xs text-brand-muted hover:text-teal-300"
+                            >
+                              <ExternalLink className="w-3.5 h-3.5" />
+                              View Case Study
+                            </a>
+                          )}
+                        </div>
+                      </motion.article>
+                    ))}
+                  </div>
+                </motion.div>
+              )
+            })}
+          </div>
 
           <motion.div variants={fadeUp} className="mt-6 pt-4 border-t border-navy-700/40 flex flex-wrap gap-3">
             <a
-              href="https://github.com/Pinklove4/My_Portfolio/tree/main/cybersecurity-portfolio"
+              href={`${repoBase}/expanded-labs`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-flex items-center gap-2"
             >
               <Github className="w-4 h-4" />
-              View Full Cybersecurity Portfolio
+              View Expanded Labs Repository
+            </a>
+            <a
+              href={`${repoBase}/expanded-labs/assets/screenshots`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline inline-flex items-center gap-2"
+            >
+              <ExternalLink className="w-4 h-4" />
+              View Visual Asset Placeholders
             </a>
           </motion.div>
         </motion.div>

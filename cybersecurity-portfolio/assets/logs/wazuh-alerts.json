@@ -1,0 +1,9 @@
+[
+  {
+    "rule_id": 5710,
+    "level": 12,
+    "description": "sshd: brute force trying to get access",
+    "agent": "ubuntu-lab-01",
+    "srcip": "203.0.113.45"
+  }
+]
