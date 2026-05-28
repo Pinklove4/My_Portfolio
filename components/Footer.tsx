@@ -6,7 +6,7 @@ const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Lab', href: '#homelab' },
+  { label: 'Home Lab', href: '#homelab' },
   { label: 'Certifications', href: '#certifications' },
   { label: 'Experience', href: '#experience' },
   { label: 'Blog', href: '#blog' },
@@ -25,11 +25,12 @@ export default function Footer() {
                 <Terminal className="w-4 h-4 text-teal-300" />
               </div>
               <span className="font-sora font-bold text-brand-light text-sm">
-                Teliyah<span className="text-teal-300">.</span>dev
+                Teliyah<span className="text-teal-300">.</span>security
               </span>
             </a>
             <p className="text-brand-muted text-xs leading-relaxed max-w-[220px]">
-              Network Engineer specializing in secure infrastructure, cybersecurity, and cloud operations.
+              Cybersecurity Analyst and SOC Analyst candidate with hands-on lab experience in infrastructure,
+              monitoring, and cloud security workflows.
             </p>
           </div>
 
@@ -76,7 +77,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-6 border-t border-navy-700/40 flex flex-wrap items-center justify-between gap-4">
           <p className="text-xs text-brand-muted">
-            &copy; 2026 Teliyah Perez · Network Engineer Portfolio
+            &copy; 2026 Teliyah Perez · Cybersecurity Portfolio
           </p>
           <a
             href="#"

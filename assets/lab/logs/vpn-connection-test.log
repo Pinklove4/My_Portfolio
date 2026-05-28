@@ -1,0 +1,4 @@
+2026-05-28 20:22:08 initiating WireGuard handshake from analyst laptop
+2026-05-28 20:22:18 peer-laptop handshake complete, tunnel 10.8.0.2 assigned
+2026-05-28 20:22:23 route validation passed for VLAN 10 management hosts
+2026-05-28 20:22:29 remote RDP and HTTPS tests succeeded through VPN path

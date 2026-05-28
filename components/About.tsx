@@ -77,21 +77,22 @@ export default function About() {
             <motion.div variants={fadeUp} className="w-12 h-0.5 bg-gradient-to-r from-teal-300 to-sky-500 rounded-full mb-8" />
 
             <motion.p variants={fadeUp} className="text-brand-muted leading-relaxed text-base mb-5">
-              I am a passionate and driven Network Engineer professional with a deep understanding
-              of virtualization, system administration, and modern networking technologies. Over
-              the years, I've built expertise in platforms such as Hyper-V and Proxmox, leveraging
-              them to design and manage efficient, scalable virtual environments.
+              I am a cybersecurity analyst and SOC analyst candidate with hands-on experience built
+              through home-lab projects focused on virtualization, system administration, networking,
+              cloud security, and defensive monitoring. I use platforms such as Hyper-V and Proxmox
+              to simulate realistic infrastructure workflows and practice troubleshooting in a safe
+              lab environment.
             </motion.p>
             <motion.p variants={fadeUp} className="text-brand-muted leading-relaxed text-base mb-5">
-              My strong foundation in Linux and Ubuntu allows me to optimize systems for
-              performance, security, and reliability, while ensuring seamless integration across
-              diverse infrastructures. I bring a comprehensive skill set covering core networking
-              principles, routing and switching, firewalls, VPNs, and cloud-based solutions.
+              My background includes Linux and Windows administration, network segmentation,
+              firewalls, VPNs, SIEM tooling, and log review. I focus on understanding how systems
+              connect, how alerts are generated, and how documentation supports repeatable security
+              operations.
             </motion.p>
             <motion.p variants={fadeUp} className="text-brand-muted leading-relaxed text-base mb-8">
-              I thrive on solving complex technical challenges—whether it's architecting resilient
-              networks, automating processes, or troubleshooting mission-critical systems. My goal
-              is to build systems that are secure, scalable, and future-ready.
+              I enjoy breaking down technical problems, validating security controls, and documenting
+              what I learn so I can contribute in entry-level to early mid-level cybersecurity,
+              infrastructure support, network support, and cloud security roles.
             </motion.p>
 
             {/* Quote card */}

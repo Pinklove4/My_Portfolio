@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teliyah Perez | Home Lab Report</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #112131;
+      --muted: #4f6477;
+      --line: #d8e1ea;
+      --panel: #ffffff;
+      --soft: #f4f7fb;
+      --accent: #0f766e;
+      --accent-2: #0369a1;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #eef3f8;
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 32px auto;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 48px rgba(17, 33, 49, 0.12);
+    }
+
+    .header {
+      padding: 40px 48px 28px;
+      background: linear-gradient(135deg, #f8fbff 0%, #eef7f7 55%, #eef5fb 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      margin-top: 14px;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .meta-card {
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .meta-card strong {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+    }
+
+    .content {
+      padding: 36px 48px 48px;
+    }
+
+    .section {
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: var(--ink);
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      background: var(--soft);
+      padding: 18px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: 14px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      background: #f6fafc;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    li + li { margin-top: 8px; }
+
+    .note {
+      margin-top: 12px;
+      padding: 14px 16px;
+      background: #f9fcff;
+      border-left: 4px solid var(--accent-2);
+      color: var(--muted);
+    }
+
+    .footer {
+      padding: 20px 48px 36px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      padding: 14px 18px;
+      background: rgba(238, 243, 248, 0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .toolbar button {
+      border: 1px solid #c8d5e3;
+      background: white;
+      color: var(--ink);
+      padding: 10px 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    @media print {
+      body { background: white; }
+      .toolbar { display: none; }
+      .page {
+        margin: 0;
+        max-width: none;
+        box-shadow: none;
+        border: none;
+      }
+      a { color: inherit; text-decoration: none; }
+    }
+
+    @media (max-width: 820px) {
+      .page { margin: 0; }
+      .header, .content, .footer { padding-left: 20px; padding-right: 20px; }
+      .meta, .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button onclick="window.print()">Print / Save as PDF</button>
+  </div>
+
+  <article class="page">
+    <header class="header">
+      <div class="eyebrow">Recruiter Summary</div>
+      <h1>Infrastructure / Home Lab Report</h1>
+      <p class="subtitle">
+        Simulated home-lab environment built for hands-on learning across networking, firewall administration,
+        VLAN segmentation, SIEM monitoring, VPN access, virtualization, and troubleshooting.
+      </p>
+      <div class="meta">
+        <div class="meta-card">
+          <strong>Candidate</strong>
+          Teliyah Perez
+        </div>
+        <div class="meta-card">
+          <strong>Target Roles</strong>
+          SOC Analyst, Cybersecurity Analyst, IT / Network Support
+        </div>
+        <div class="meta-card">
+          <strong>Environment</strong>
+          Simulated home-lab environment
+        </div>
+        <div class="meta-card">
+          <strong>Focus</strong>
+          Monitoring, segmentation, troubleshooting, documentation
+        </div>
+      </div>
+    </header>
+
+    <section class="content">
+      <section class="section">
+        <h2>Purpose of the Lab</h2>
+        <p>
+          This lab was built to practice enterprise-style networking, firewall administration, VLAN segmentation,
+          SIEM monitoring, infrastructure monitoring, VPN access, and security troubleshooting in a safe simulated
+          environment.
+        </p>
+        <div class="note">
+          This report documents hands-on learning and validation in a home lab. It does not represent a real customer
+          or enterprise production environment.
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Environment Overview</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Technology</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Firewall</td><td>pfSense + Snort</td><td>Routing, firewall rules, IDS alerts</td></tr>
+            <tr><td>Hypervisor</td><td>Proxmox VE / Hyper-V</td><td>Virtual machine hosting</td></tr>
+            <tr><td>SIEM</td><td>Wazuh + Splunk</td><td>Log collection and alert analysis</td></tr>
+            <tr><td>Monitoring</td><td>Nagios + Grafana</td><td>Uptime, service, and metric monitoring</td></tr>
+            <tr><td>DNS / DHCP</td><td>Pi-hole + Windows DHCP</td><td>DNS filtering and IP management</td></tr>
+            <tr><td>VPN</td><td>WireGuard + OpenVPN</td><td>Secure remote lab access</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section grid">
+        <div class="panel">
+          <h2>What I Practiced</h2>
+          <ul>
+            <li>Configuring firewall rules and reviewing IDS alerts.</li>
+            <li>Building VLANs and testing inter-VLAN routing.</li>
+            <li>Deploying virtual machines in Proxmox and Hyper-V.</li>
+            <li>Forwarding logs to Wazuh and Splunk for visibility.</li>
+            <li>Monitoring uptime with Nagios and Grafana.</li>
+            <li>Troubleshooting VPN connectivity and documenting fixes.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h2>Security Controls</h2>
+          <ul>
+            <li>VLAN segmentation and firewall ACLs.</li>
+            <li>Snort IDS monitoring and centralized logging.</li>
+            <li>SIEM alerting in Wazuh and Splunk.</li>
+            <li>VPN-only management access for administration workflows.</li>
+            <li>DNS filtering, endpoint monitoring, and validation testing.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Validation Highlights</h2>
+        <ul>
+          <li>Ping tests between approved VLANs succeeded after interface tagging review.</li>
+          <li>Blocked access testing confirmed IoT devices could not reach the management VLAN.</li>
+          <li>WireGuard tunnel established successfully and allowed management access.</li>
+          <li>Wazuh agents checked in after firewall rules allowed agent communication.</li>
+          <li>Splunk searches returned pfSense firewall events after source type adjustments.</li>
+          <li>Nagios checks passed after ICMP and service ports were permitted between expected segments.</li>
+        </ul>
+      </section>
+
+      <section class="section grid">
+        <div class="panel">
+          <h2>Troubleshooting Notes</h2>
+          <ul>
+            <li>VLAN routing initially failed because a trunk port was not tagged correctly.</li>
+            <li>Wazuh agents did not appear until firewall rules allowed manager communication.</li>
+            <li>VPN testing failed during one iteration due to mismatched peer keys.</li>
+            <li>Splunk ingestion required source type tuning for cleaner firewall searches.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h2>Lessons Learned</h2>
+          <ul>
+            <li>Segmentation improves control over traffic flow and reduces unnecessary access paths.</li>
+            <li>Centralized logging makes investigation and alert review more practical.</li>
+            <li>Firewall rules affect both connectivity and visibility, not just access.</li>
+            <li>Repeated troubleshooting builds stronger infrastructure understanding.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Resume-Ready Summary</h2>
+        <ul>
+          <li>Built an enterprise-style home lab using pfSense, VLAN segmentation, Proxmox, Wazuh, Splunk, and Nagios to practice security monitoring and infrastructure troubleshooting.</li>
+          <li>Configured segmented lab networks for management, servers, DMZ, IoT, and workstations to practice access control, firewall rule testing, and log monitoring.</li>
+          <li>Documented lab validation tests, troubleshooting steps, and security controls to demonstrate practical SOC, networking, and infrastructure support skills.</li>
+        </ul>
+      </section>
+    </section>
+
+    <footer class="footer">
+      Teliyah Perez | Cybersecurity Analyst / SOC Analyst Candidate | Recruiter-ready lab summary formatted for browser reading or PDF export.
+    </footer>
+  </article>
+</body>
+</html>

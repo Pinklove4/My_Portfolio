@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" fill="none">
+  <rect width="1280" height="720" rx="24" fill="#08131d"/>
+  <rect x="40" y="40" width="1200" height="640" rx="18" fill="#0d1b28" stroke="#1b3747"/>
+  <text x="76" y="94" fill="#e8f2fc" font-size="26" font-family="Segoe UI, Arial">WireGuard Tunnel Status</text>
+  <rect x="76" y="140" width="1128" height="140" rx="18" fill="#0f2234"/>
+  <text x="108" y="198" fill="#5eead4" font-size="22" font-family="Consolas, monospace">peer-laptop | latest handshake: 18s ago | transfer: 4.31 MiB received / 1.22 MiB sent</text>
+  <text x="108" y="238" fill="#9ec8f5" font-size="20" font-family="Consolas, monospace">allowed IPs: 10.8.0.2/32 | route test: PASS | management access: ENABLED</text>
+  <text x="76" y="618" fill="#8fb7da" font-size="18" font-family="Segoe UI, Arial">Mock screenshot placeholder showing successful secure remote access.</text>
+</svg>

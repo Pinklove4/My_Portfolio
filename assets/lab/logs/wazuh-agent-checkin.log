@@ -1,0 +1,4 @@
+2026-05-28T20:17:44 agent-07 connected from 10.50.0.24 and completed registration with manager
+2026-05-28T20:18:02 agent-05 connected from 10.20.0.14 and sent inventory update
+2026-05-28T20:18:16 agent-03 connected from 10.20.0.11 and uploaded latest heartbeat
+2026-05-28T20:18:40 manager notice: all monitored lab endpoints reporting normally

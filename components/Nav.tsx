@@ -10,7 +10,7 @@ const navLinks = [
   { label: 'About', href: '/about' },
   { label: 'Skills', href: '/skills' },
   { label: 'Projects', href: '/projects' },
-  { label: 'Lab', href: '/lab' },
+  { label: 'Home Lab', href: '/lab' },
   { label: 'Certifications', href: '/certifications' },
   { label: 'Experience', href: '/experience' },
   { label: 'Blog', href: '/blog' },
@@ -46,7 +46,7 @@ export default function Nav() {
             <Terminal className="w-4 h-4 text-teal-300" />
           </div>
           <span className="font-sora font-bold text-brand-light text-sm tracking-wide">
-            Teliyah Portfolio
+            Teliyah Security Lab
           </span>
         </Link>
 
@@ -72,7 +72,7 @@ export default function Nav() {
           href="/contact"
           className="hidden lg:inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-teal-300/40 text-teal-300 text-sm font-semibold hover:bg-teal-300/10 hover:border-teal-300/70 transition-all duration-200"
         >
-          Hire Me
+          Let&apos;s Connect
         </Link>
 
         {/* Mobile hamburger */}
@@ -115,7 +115,7 @@ export default function Nav() {
                 onClick={() => setMobileOpen(false)}
                 className="col-span-2 mt-2 px-4 py-2.5 text-center rounded-lg border border-teal-300/40 text-teal-300 text-sm font-semibold hover:bg-teal-300/10 transition-all duration-200"
               >
-                Hire Me
+                Let&apos;s Connect
               </Link>
             </div>
           </motion.div>

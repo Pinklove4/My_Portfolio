@@ -209,7 +209,7 @@ export default function Contact() {
                       required
                       value={form.subject}
                       onChange={handleChange}
-                      placeholder="Network Engineer Opportunity"
+                      placeholder="Cybersecurity or Infrastructure Opportunity"
                       className={inputClass}
                     />
                   </div>

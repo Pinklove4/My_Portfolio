@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" fill="none">
+  <rect width="1280" height="720" rx="24" fill="#07121b"/>
+  <rect x="36" y="36" width="1208" height="648" rx="18" fill="#0f1f2d" stroke="#1b3849"/>
+  <text x="72" y="92" fill="#e8f2fc" font-size="26" font-family="Segoe UI, Arial">Proxmox VE Dashboard</text>
+  <rect x="72" y="130" width="300" height="160" rx="18" fill="#10273c"/>
+  <rect x="400" y="130" width="300" height="160" rx="18" fill="#10273c"/>
+  <rect x="728" y="130" width="300" height="160" rx="18" fill="#10273c"/>
+  <text x="100" y="188" fill="#5eead4" font-size="20" font-family="Segoe UI, Arial">Host Status</text>
+  <text x="100" y="226" fill="#d6e8fb" font-size="34" font-family="Segoe UI, Arial">Online</text>
+  <text x="428" y="188" fill="#38bdf8" font-size="20" font-family="Segoe UI, Arial">Active VMs</text>
+  <text x="428" y="226" fill="#d6e8fb" font-size="34" font-family="Segoe UI, Arial">7</text>
+  <text x="756" y="188" fill="#38bdf8" font-size="20" font-family="Segoe UI, Arial">Lab Notes</text>
+  <text x="756" y="226" fill="#d6e8fb" font-size="24" font-family="Segoe UI, Arial">Windows Server, Ubuntu, Analyst WS</text>
+  <rect x="72" y="326" width="1136" height="290" rx="18" fill="#0b1824" stroke="#1c3747"/>
+  <text x="100" y="376" fill="#9dc1e2" font-size="20" font-family="Segoe UI, Arial">Mock screenshot placeholder showing lab virtualization inventory.</text>
+</svg>

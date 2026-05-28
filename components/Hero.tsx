@@ -61,7 +61,7 @@ export default function Hero() {
         style={{ animationDelay: '3s' }}
       >
         <Network className="w-4 h-4 text-sky-400" />
-        <span className="text-xs text-brand-muted font-medium">Enterprise Networking</span>
+        <span className="text-xs text-brand-muted font-medium">Network Defense Lab</span>
       </motion.div>
 
       {/* Main content */}
@@ -117,7 +117,8 @@ export default function Hero() {
             variants={fadeUp}
             className="text-sm text-brand-muted/90 mb-8 max-w-2xl"
           >
-            All projects are based on ethical home-lab simulations and realistic defensive workflows.
+            Built to simulate enterprise-style concepts through ethical home-lab exercises, documented troubleshooting,
+            and realistic defensive workflows.
           </motion.p>
 
           {/* CTAs */}

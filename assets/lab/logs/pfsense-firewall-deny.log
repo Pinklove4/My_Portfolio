@@ -1,0 +1,4 @@
+May 28 20:14:10 firewall filterlog: 1000000103 block in on em1.40: 10.40.0.22:51514 -> 10.10.0.5:3389 TCP S
+May 28 20:14:11 firewall filterlog: 1000000103 block in on em1.40: 10.40.0.22:51515 -> 10.10.0.5:5985 TCP S
+May 28 20:14:13 firewall filterlog: 1000000103 pass out on em1.50: 10.50.0.24:49888 -> 10.20.0.10:443 TCP PA
+May 28 20:14:17 firewall filterlog: 1000000103 block in on em1.30: 203.0.113.50:44321 -> 10.20.0.10:3389 TCP S

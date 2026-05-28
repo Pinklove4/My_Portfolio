@@ -19,12 +19,13 @@ const sourceSans = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
-  title: 'Teliyah Perez | Network Engineer',
+  title: 'Teliyah Perez | Cybersecurity Analyst Portfolio',
   description:
-    'Network Engineer specializing in Secure Infrastructure, Cybersecurity, and Cloud Operations. Portfolio of projects, certifications, and technical expertise.',
+    'Cybersecurity Analyst and SOC Analyst candidate with hands-on home-lab experience in SIEM monitoring, network segmentation, incident response, cloud IAM, and infrastructure troubleshooting.',
   keywords: [
-    'Network Engineer',
     'Cybersecurity',
+    'Cybersecurity Analyst',
+    'SOC Analyst',
     'Cloud Operations',
     'Infrastructure',
     'Hyper-V',

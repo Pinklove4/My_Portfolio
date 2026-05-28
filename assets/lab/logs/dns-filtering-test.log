@@ -1,0 +1,4 @@
+2026-05-28 20:31:02 query lab-client-03 -> updates.example-lab.test allowed by Pi-hole policy
+2026-05-28 20:31:14 query lab-client-03 -> ads.bad-domain.test blocked by Pi-hole policy
+2026-05-28 20:31:15 response status NXDOMAIN returned to requesting host
+2026-05-28 20:31:16 validation note: filtered query visible in dashboard and test client output
