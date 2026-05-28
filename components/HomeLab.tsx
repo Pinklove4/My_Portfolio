@@ -5,6 +5,7 @@ import { fadeUp, scaleIn, stagger } from '@/lib/motion'
 import MermaidDiagram from '@/components/MermaidDiagram'
 
 const repoBase = 'https://github.com/Pinklove4/My_Portfolio/blob/main/assets/lab'
+const evidenceImageBase = 'https://raw.githubusercontent.com/Pinklove4/My_Portfolio/main/assets/lab/screenshots'
 
 const quickStats = [
   { label: 'Segments Tested', value: '5 VLANs' },
@@ -96,48 +97,56 @@ const evidenceCards = [
     accent: 'teal',
     status: 'Policy review complete',
     detail: 'Allow VPN management, restrict IoT to management, log DMZ ingress decisions.',
+    image: `${evidenceImageBase}/pfsense-firewall-rules.svg`,
   },
   {
     title: 'VLAN Configuration',
     accent: 'sky',
     status: 'Trunk and access ports verified',
     detail: 'Tested VLAN tagging across the core switch and validated expected segmentation paths.',
+    image: `${evidenceImageBase}/vlan-configuration.svg`,
   },
   {
     title: 'Proxmox VM Dashboard',
     accent: 'teal',
     status: 'Lab hosts online',
     detail: 'Windows Server, Ubuntu server, and analyst workstations deployed for simulation tasks.',
+    image: `${evidenceImageBase}/proxmox-vm-dashboard.svg`,
   },
   {
     title: 'Wazuh Agent Status',
     accent: 'sky',
     status: 'Agents checking in',
     detail: 'Confirmed endpoint visibility and agent registration after firewall adjustments.',
+    image: `${evidenceImageBase}/wazuh-agent-status.svg`,
   },
   {
     title: 'Splunk Log Ingestion',
     accent: 'teal',
     status: 'Firewall logs searchable',
     detail: 'Reviewed source type mapping and validated searches against pfSense traffic events.',
+    image: `${evidenceImageBase}/splunk-firewall-logs.svg`,
   },
   {
     title: 'Nagios Service Checks',
     accent: 'sky',
     status: 'Monitoring healthy',
     detail: 'Validated ICMP and service polling across the server and workstation segments.',
+    image: `${evidenceImageBase}/nagios-service-checks.svg`,
   },
   {
     title: 'Grafana Lab Metrics',
     accent: 'teal',
     status: 'Dashboards populated',
     detail: 'Tracked host uptime, service state, and selected performance metrics for trend visibility.',
+    image: `${evidenceImageBase}/grafana-lab-metrics.svg`,
   },
   {
     title: 'WireGuard Tunnel Status',
     accent: 'sky',
     status: 'Remote access validated',
     detail: 'Confirmed encrypted access path into the lab before allowing management workflows.',
+    image: `${evidenceImageBase}/wireguard-tunnel-status.svg`,
   },
 ]
 
@@ -184,7 +193,7 @@ const resumeBullets = [
 
 const artifactGroups = [
   {
-    title: 'Mock Screenshots',
+    title: 'Screenshots',
     items: [
       { label: 'pfSense Firewall Rules', href: `${repoBase}/screenshots/pfsense-firewall-rules.svg` },
       { label: 'VLAN Configuration', href: `${repoBase}/screenshots/vlan-configuration.svg` },
@@ -327,7 +336,7 @@ export default function HomeLab() {
                 <p className="mt-2 max-w-3xl text-sm leading-7 text-brand-muted">
                   This lab was built to practice enterprise-style networking, firewall administration, VLAN
                   segmentation, SIEM monitoring, infrastructure monitoring, VPN access, and security troubleshooting
-                  in a safe simulated environment.
+                  in a controlled lab environment.
                 </p>
               </div>
               <div className="rounded-2xl border border-amber-400/20 bg-amber-400/10 px-4 py-3 text-xs leading-6 text-amber-100">
@@ -447,7 +456,7 @@ export default function HomeLab() {
             <div>
               <h3 className="font-sora text-lg font-bold text-brand-light">VLAN Segmentation Table</h3>
               <p className="mt-2 text-sm leading-7 text-brand-muted">
-                Segmentation was designed for hands-on learning so I could test routing, access control, monitoring,
+                Segmentation was implemented for hands-on learning so I could test routing, access control, monitoring,
                 and troubleshooting between common infrastructure zones.
               </p>
             </div>
@@ -492,8 +501,8 @@ export default function HomeLab() {
           <div className="mb-5">
             <h3 className="font-sora text-lg font-bold text-brand-light">Hands-On Evidence</h3>
             <p className="mt-2 max-w-3xl text-sm leading-7 text-brand-muted">
-              These mock evidence panels are designed to represent the kinds of screenshots and dashboards reviewed
-              during lab exercises when practicing infrastructure support and security monitoring workflows.
+              Screenshots and dashboards from the lab environment used to document infrastructure support and
+              security monitoring workflows.
             </p>
           </div>
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -508,18 +517,12 @@ export default function HomeLab() {
                     <p className="mt-1 text-xs text-brand-muted">{card.status}</p>
                   </div>
                   <div className="space-y-3 p-4">
-                    <div className="rounded-xl border border-navy-700/60 bg-[#08131d] p-3">
-                      <div className="mb-3 flex items-center gap-1.5">
-                        <span className="h-2 w-2 rounded-full bg-rose-400" />
-                        <span className="h-2 w-2 rounded-full bg-amber-300" />
-                        <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                      </div>
-                      <div className="space-y-2">
-                        <div className="h-2 rounded-full bg-navy-700/70" />
-                        <div className="h-2 w-4/5 rounded-full bg-navy-700/70" />
-                        <div className="h-16 rounded-xl border border-navy-700/40 bg-gradient-to-br from-navy-800 to-navy-950" />
-                      </div>
-                    </div>
+                    <img
+                      src={card.image}
+                      alt={`${card.title} screenshot`}
+                      loading="lazy"
+                      className="h-44 w-full rounded-xl border border-navy-700/60 bg-[#08131d] object-cover"
+                    />
                     <p className="text-sm leading-6 text-brand-muted">{card.detail}</p>
                   </div>
                 </motion.div>

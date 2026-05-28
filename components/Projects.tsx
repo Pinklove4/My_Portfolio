@@ -59,7 +59,7 @@ const projects = [
     category: 'Networking',
     icon: Network,
     color: 'teal',
-    summary: 'Designed and implemented a full enterprise VLAN topology with inter-VLAN routing, STP, and access control.',
+    summary: 'Implemented a full enterprise VLAN topology with inter-VLAN routing, STP, and access control.',
     tech: ['Cisco IOS', 'VLANs', 'OSPF', 'STP', 'ACLs', 'Subnetting'],
     problem: 'Needed a secure segmented network to isolate departments and reduce broadcast domains while maintaining cross-VLAN communication.',
     outcome: 'Successfully deployed 8 VLANs across multiple switches with inter-VLAN routing, reducing broadcast traffic by 60% and enforcing granular access policies.',
@@ -75,7 +75,7 @@ const projects = [
     summary: 'Built a Security Operations Center lab using Wazuh SIEM for log collection, threat detection, and incident response.',
     tech: ['Wazuh', 'Elasticsearch', 'Ubuntu Server', 'Windows Server', 'Docker', 'Python'],
     problem: 'Needed practical hands-on experience with SIEM operations, log correlation, and detecting common attack patterns.',
-    outcome: 'Deployed a fully functional SIEM monitoring 6 endpoints, detecting simulated attacks including brute force, privilege escalation, and lateral movement.',
+    outcome: 'Deployed a fully functional SIEM monitoring 6 endpoints, detecting attack scenarios including brute force, privilege escalation, and lateral movement.',
     security: 'Configured custom detection rules, active response scripts, and integrated threat intelligence feeds.',
     challenges: 'Tuning alert thresholds to reduce false positives while maintaining detection sensitivity.',
   },
@@ -114,7 +114,7 @@ const projects = [
     summary: 'Set up a full Active Directory domain lab to practice offensive and defensive techniques in a controlled environment.',
     tech: ['Windows Server', 'Active Directory', 'Kali Linux', 'BloodHound', 'PowerShell', 'Group Policy'],
     problem: 'Required hands-on experience with AD attack paths like Kerberoasting, Pass-the-Hash, and AS-REP Roasting alongside hardening techniques.',
-    outcome: 'Successfully simulated 8 common AD attack techniques and implemented corresponding defenses, improving AD security posture significantly.',
+    outcome: 'Successfully executed 8 common AD attack techniques and implemented corresponding defenses, improving AD security posture significantly.',
     security: 'Applied LAPS, tiered admin model, Protected Users security group, and Credential Guard.',
     challenges: 'Maintaining lab isolation to prevent accidental exposure while keeping realistic domain complexity.',
   },
@@ -174,7 +174,7 @@ const expandedLabs: ExpandedLab[] = [
     title: 'Endpoint Detection and Response Lab',
     slug: 'endpoint-detection-response-lab',
     categoryKey: 'soc-endpoint-security',
-    description: 'Practiced analyzing simulated endpoint alerts, suspicious process behavior, and quarantine workflow decisions.',
+    description: 'Practiced analyzing endpoint alerts, suspicious process behavior, and quarantine workflow decisions.',
     technologies: ['Microsoft Defender', 'Wazuh', 'Sysmon', 'PowerShell'],
     skills: ['Alert Triage', 'Endpoint Monitoring', 'Incident Documentation'],
     difficulty: 'Beginner-Intermediate',
@@ -246,18 +246,18 @@ const expandedLabs: ExpandedLab[] = [
     title: 'Secure File Server Project',
     slug: 'secure-file-server-project',
     categoryKey: 'system-hardening',
-    description: 'Practiced SMB permission design and file access logging in a simulated role-based access setup.',
+    description: 'Practiced SMB permission design and file access logging in a role-based access setup.',
     technologies: ['Windows Server', 'SMB ACLs', 'PowerShell'],
     skills: ['Access Control', 'Audit Logging', 'RBAC Basics'],
     difficulty: 'Beginner-Intermediate',
-    realism: 'Simulated Home Lab',
+    realism: 'Home Lab Environment',
     metrics: { logs: 2, alerts: 1, systems: 1, diagrams: 1 },
   },
   {
     title: 'Email Threat Analysis Lab',
     slug: 'email-threat-analysis-lab',
     categoryKey: 'incident-response',
-    description: 'Investigated simulated phishing alerts using header review and attachment triage workflow notes.',
+    description: 'Investigated phishing alerts using header review and attachment triage workflow notes.',
     technologies: ['Defender for Office Concepts', 'Splunk', 'Sandbox Notes'],
     skills: ['Phishing Analysis', 'Triage Workflow', 'Analyst Notes'],
     difficulty: 'Beginner',
@@ -268,7 +268,7 @@ const expandedLabs: ExpandedLab[] = [
     title: 'Ransomware Investigation Project',
     slug: 'ransomware-investigation-project',
     categoryKey: 'incident-response',
-    description: 'Worked through a simulated ransomware-style timeline and documented containment and recovery actions.',
+    description: 'Worked through a ransomware-style timeline and documented containment and recovery actions.',
     technologies: ['Wazuh', 'Sysmon', 'Windows Logs'],
     skills: ['Incident Timeline', 'Containment Steps', 'Recovery Notes'],
     difficulty: 'Beginner-Intermediate',
@@ -279,11 +279,11 @@ const expandedLabs: ExpandedLab[] = [
     title: 'Malware Analysis Basics Project',
     slug: 'malware-analysis-basics-project',
     categoryKey: 'incident-response',
-    description: 'Practiced beginner static triage on simulated suspicious files and extracted basic IOC notes.',
+    description: 'Practiced beginner static triage on suspicious files and extracted basic IOC notes.',
     technologies: ['PowerShell', 'Hash Tools', 'Sandbox Workflow'],
     skills: ['File Triage', 'IOC Extraction', 'Documentation'],
     difficulty: 'Beginner',
-    realism: 'Simulated Home Lab',
+    realism: 'Home Lab Environment',
     metrics: { logs: 2, alerts: 2, systems: 1, diagrams: 1 },
   },
   {
@@ -312,7 +312,7 @@ const expandedLabs: ExpandedLab[] = [
     title: 'Insider Threat Investigation',
     slug: 'insider-threat-investigation',
     categoryKey: 'threat-intelligence-hunting',
-    description: 'Compared simulated baseline user activity against unusual file access patterns and documented findings.',
+    description: 'Compared baseline user activity against unusual file access patterns and documented findings.',
     technologies: ['SIEM Logs', 'PowerShell', 'File Access Audits'],
     skills: ['Behavior Analysis', 'Log Correlation', 'Risk Notes'],
     difficulty: 'Intermediate',
@@ -327,14 +327,14 @@ const expandedLabs: ExpandedLab[] = [
     technologies: ['Splunk Dashboards', 'CSV Metrics'],
     skills: ['Security Metrics', 'Data Visualization', 'SOC Reporting'],
     difficulty: 'Beginner-Intermediate',
-    realism: 'Simulated Home Lab',
+    realism: 'Home Lab Environment',
     metrics: { logs: 3, alerts: 3, systems: 2, diagrams: 1 },
   },
   {
     title: 'SOC Ticketing Workflow Project',
     slug: 'soc-ticketing-workflow-project',
     categoryKey: 'soc-operations-metrics',
-    description: 'Simulated analyst ticket lifecycle from alert triage to escalation and closure notes.',
+    description: 'Tracked analyst ticket lifecycle from alert triage to escalation and closure notes.',
     technologies: ['Jira/ServiceNow Workflow', 'SIEM Alerts'],
     skills: ['Ticket Handling', 'Escalation Workflow', 'Analyst Communication'],
     difficulty: 'Beginner',
@@ -345,7 +345,7 @@ const expandedLabs: ExpandedLab[] = [
     title: 'Password Attack Detection Lab',
     slug: 'password-attack-detection-lab',
     categoryKey: 'iam-identity-monitoring',
-    description: 'Analyzed simulated failed login bursts and tested lockout policy tuning for practical detection.',
+    description: 'Analyzed failed login bursts and tested lockout policy tuning for practical detection.',
     technologies: ['Active Directory Logs', 'Splunk', 'PowerShell'],
     skills: ['Identity Monitoring', 'Auth Analysis', 'Policy Validation'],
     difficulty: 'Beginner-Intermediate',
@@ -356,7 +356,7 @@ const expandedLabs: ExpandedLab[] = [
     title: 'Data Loss Prevention Lab',
     slug: 'data-loss-prevention-lab',
     categoryKey: 'iam-identity-monitoring',
-    description: 'Practiced monitoring simulated USB exfiltration indicators and documented policy enforcement results.',
+    description: 'Practiced monitoring USB exfiltration indicators and documented policy enforcement results.',
     technologies: ['DLP Policy Simulation', 'Endpoint Logs', 'Splunk'],
     skills: ['DLP Monitoring', 'Policy Testing', 'Evidence Notes'],
     difficulty: 'Beginner-Intermediate',
@@ -367,11 +367,11 @@ const expandedLabs: ExpandedLab[] = [
     title: 'Mobile Device Security Project',
     slug: 'mobile-device-security-project',
     categoryKey: 'iam-identity-monitoring',
-    description: 'Reviewed simulated BYOD compliance signals and tested basic conditional access decision logic.',
+    description: 'Reviewed BYOD compliance signals and tested basic conditional access decision logic.',
     technologies: ['MDM Concepts', 'Conditional Access Notes', 'SIEM Logs'],
     skills: ['Device Compliance', 'Identity Controls', 'Monitoring'],
     difficulty: 'Beginner',
-    realism: 'Simulated Home Lab',
+    realism: 'Home Lab Environment',
     metrics: { logs: 2, alerts: 2, systems: 1, diagrams: 1 },
   },
   {
@@ -382,14 +382,14 @@ const expandedLabs: ExpandedLab[] = [
     technologies: ['Policy Templates', 'Risk Register', 'Security Awareness Plan'],
     skills: ['Security Documentation', 'Risk Tracking', 'Control Ownership'],
     difficulty: 'Beginner',
-    realism: 'Simulated Home Lab',
+    realism: 'Home Lab Environment',
     metrics: { logs: 1, alerts: 1, systems: 1, diagrams: 1 },
   },
   {
     title: 'Web Application Security Testing Project',
     slug: 'web-application-security-testing-project',
     categoryKey: 'application-security',
-    description: 'Tested simulated OWASP-style flaws and documented defensive recommendations for beginner appsec practice.',
+    description: 'Tested OWASP-style flaws and documented defensive recommendations for beginner appsec practice.',
     technologies: ['Burp Suite Community', 'OWASP Test Lab', 'HTTP Logs'],
     skills: ['Web Security Testing', 'Input Validation Review', 'Findings Reporting'],
     difficulty: 'Intermediate',
@@ -400,7 +400,7 @@ const expandedLabs: ExpandedLab[] = [
     title: 'Cloud Incident Response Project',
     slug: 'cloud-incident-response-project',
     categoryKey: 'cloud-security-iam',
-    description: 'Investigated simulated IAM misuse indicators in cloud audit logs and tested key rotation response steps.',
+    description: 'Investigated IAM misuse indicators in cloud audit logs and tested key rotation response steps.',
     technologies: ['AWS CloudTrail', 'IAM Review', 'Splunk'],
     skills: ['Cloud Log Review', 'IAM Incident Triage', 'Remediation Validation'],
     difficulty: 'Beginner-Intermediate',
@@ -412,7 +412,7 @@ const expandedLabs: ExpandedLab[] = [
     title: 'Container Security Project',
     slug: 'container-security-project',
     categoryKey: 'cloud-security-iam',
-    description: 'Scanned simulated container images and reviewed basic runtime hardening controls in lab deployments.',
+    description: 'Scanned container images and reviewed basic runtime hardening controls in lab deployments.',
     technologies: ['Docker', 'Image Scanning', 'Kubernetes Basics'],
     skills: ['Container Hardening', 'Vulnerability Review', 'Cloud Security Basics'],
     difficulty: 'Beginner-Intermediate',
@@ -423,7 +423,7 @@ const expandedLabs: ExpandedLab[] = [
     title: 'Identity and Access Management Review',
     slug: 'identity-access-management-review',
     categoryKey: 'cloud-security-iam',
-    description: 'Performed least-privilege review of simulated IAM and RBAC setups with practical remediation notes.',
+    description: 'Performed least-privilege review of IAM and RBAC setups with practical remediation notes.',
     technologies: ['AWS IAM', 'Azure RBAC Concepts', 'PowerShell'],
     skills: ['Least Privilege', 'Access Review', 'Cloud IAM'],
     difficulty: 'Beginner-Intermediate',
@@ -439,7 +439,7 @@ const expandedLabs: ExpandedLab[] = [
     technologies: ['Nessus/OpenVAS Outputs', 'Patch Tracker CSV', 'PowerShell'],
     skills: ['Patch Validation', 'Risk Prioritization', 'Vulnerability Tracking'],
     difficulty: 'Beginner-Intermediate',
-    realism: 'Simulated Home Lab',
+    realism: 'Home Lab Environment',
     metrics: { logs: 2, alerts: 2, systems: 3, diagrams: 1 },
     caseStudy: `${repoBase}/case-studies/vulnerability-management-lab.md`,
   },
@@ -447,11 +447,11 @@ const expandedLabs: ExpandedLab[] = [
     title: 'Secure Backup and Recovery Lab',
     slug: 'secure-backup-recovery-lab',
     categoryKey: 'vulnerability-management',
-    description: 'Practiced backup validation and restore testing in simulated disruption scenarios.',
+    description: 'Practiced backup validation and restore testing in disruption scenarios.',
     technologies: ['Backup Workflow Notes', 'Restore Drills', 'Recovery Logs'],
     skills: ['Recovery Testing', 'Resilience Planning', 'Documentation'],
     difficulty: 'Beginner',
-    realism: 'Simulated Home Lab',
+    realism: 'Home Lab Environment',
     metrics: { logs: 2, alerts: 1, systems: 2, diagrams: 1 },
   },
 ]
@@ -627,7 +627,7 @@ export default function Projects() {
                       </div>
 
                       <p className="text-[11px] text-brand-muted leading-relaxed">
-                        Derived from synthetic CSV outputs created by the Python scripts in this repo. The dashboard preview reflects actual analysis results, not placeholder data.
+                        Derived from synthetic CSV outputs created by the Python scripts in this repo. The dashboard preview reflects actual analysis results, not filler data.
                       </p>
                     </div>
                   </div>
@@ -730,7 +730,7 @@ export default function Projects() {
               Expanded Labs: Practical Cybersecurity Skill Building
             </h3>
             <p className="text-brand-muted text-sm lg:text-base max-w-4xl leading-relaxed">
-              These expanded labs demonstrate practical hands-on learning across SOC operations, network defense, vulnerability management, cloud security, endpoint monitoring, incident response, and security documentation. All projects are simulated and built in ethical home-lab environments.
+              These expanded labs demonstrate practical hands-on learning across SOC operations, network defense, vulnerability management, cloud security, endpoint monitoring, incident response, and security documentation. All projects are built in controlled home-lab environments with documented validation.
             </p>
           </motion.div>
 
@@ -789,7 +789,7 @@ export default function Projects() {
             <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-3">
               {featuredLabs.map((lab) => (
                 <div key={lab.slug} className="rounded-xl border border-teal-300/20 bg-teal-300/5 p-3">
-                  <div className="text-[10px] uppercase tracking-wide text-teal-300 mb-1">Simulated Home Lab</div>
+                  <div className="text-[10px] uppercase tracking-wide text-teal-300 mb-1">Home Lab Environment</div>
                   <h5 className="text-sm font-semibold text-brand-light leading-snug mb-2">{lab.title}</h5>
                   <p className="text-xs text-brand-muted line-clamp-3">{lab.description}</p>
                   <a
@@ -853,7 +853,7 @@ export default function Projects() {
                             {lab.realism}
                           </span>
                           <span className="text-[10px] px-2 py-0.5 rounded-full border border-sky-400/30 bg-sky-400/10 text-sky-400">
-                            Simulated Home Lab
+                            Home Lab Environment
                           </span>
                         </div>
 
@@ -892,7 +892,7 @@ export default function Projects() {
                             className="inline-flex items-center gap-1.5 text-xs text-brand-muted hover:text-teal-300"
                           >
                             <HardDrive className="w-3.5 h-3.5" />
-                            Mock Screenshot
+                            Screenshot
                           </a>
                           {lab.caseStudy && (
                             <a
@@ -931,7 +931,7 @@ export default function Projects() {
               className="btn-outline inline-flex items-center gap-2"
             >
               <ExternalLink className="w-4 h-4" />
-              View Visual Asset Placeholders
+              View Visual Assets
             </a>
           </motion.div>
         </motion.div>

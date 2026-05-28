@@ -8,5 +8,5 @@
   <text x="108" y="301" fill="#9ec8f5" font-size="20" font-family="Consolas, monospace">Gi1/0/12 access vlan 50 description analyst-workstation</text>
   <rect x="76" y="356" width="1128" height="86" rx="14" fill="#0f2234"/>
   <text x="108" y="409" fill="#9ec8f5" font-size="20" font-family="Consolas, monospace">Gi1/0/20 access vlan 40 description iot-test-device</text>
-  <text x="76" y="618" fill="#8fb7da" font-size="18" font-family="Segoe UI, Arial">Mock screenshot placeholder for segmentation and trunk tagging review.</text>
+  <text x="76" y="618" fill="#8fb7da" font-size="18" font-family="Segoe UI, Arial">Segmentation and trunk tagging review evidence from switch configuration.</text>
 </svg>

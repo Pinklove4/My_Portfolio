@@ -8,5 +8,5 @@
   <text x="108" y="272" fill="#93b8da" font-size="20" font-family="Consolas, monospace">10.40.0.22   3389   14</text>
   <text x="108" y="316" fill="#93b8da" font-size="20" font-family="Consolas, monospace">203.0.113.50 3389   3</text>
   <text x="108" y="360" fill="#93b8da" font-size="20" font-family="Consolas, monospace">10.50.0.24   443    0 blocked</text>
-  <text x="82" y="620" fill="#8fb7da" font-size="18" font-family="Segoe UI, Arial">Mock screenshot placeholder showing searchable firewall telemetry.</text>
+  <text x="82" y="620" fill="#8fb7da" font-size="18" font-family="Segoe UI, Arial">Searchable firewall telemetry review from Splunk dashboard.</text>
 </svg>

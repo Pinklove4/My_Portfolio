@@ -69,7 +69,7 @@ export default function MermaidDiagram({ chart, title = 'Mermaid diagram', class
       <div className={`rounded-xl border border-navy-700/60 bg-[#08131d] p-5 ${className}`}>
         <p className="font-sora text-sm font-semibold text-brand-light">{fallbackTitle}</p>
         <p className="mt-2 text-sm leading-6 text-brand-muted">
-          Mock diagram placeholder rendered because Mermaid could not initialize in this environment.
+          Diagram preview is temporarily unavailable because Mermaid could not initialize in this environment.
         </p>
         <div className="mt-4 grid gap-2 text-xs text-brand-muted sm:grid-cols-2">
           <div className="rounded-lg border border-navy-700/40 bg-navy-900/70 px-3 py-2">Internet - pfSense Firewall</div>

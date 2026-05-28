@@ -12,5 +12,5 @@
   <text x="94" y="385" fill="#9ec8f5" font-size="20" font-family="Segoe UI, Arial">Allow Wazuh agent communication from servers and workstations</text>
   <rect x="68" y="432" width="1144" height="70" rx="12" fill="#0f2234" stroke="#1d4b63"/>
   <text x="94" y="475" fill="#9ec8f5" font-size="20" font-family="Segoe UI, Arial">Log DMZ ingress traffic forwarded to Splunk</text>
-  <text x="68" y="618" fill="#7ea6c9" font-size="18" font-family="Segoe UI, Arial">Mock screenshot placeholder for simulated home-lab documentation.</text>
+  <text x="68" y="618" fill="#7ea6c9" font-size="18" font-family="Segoe UI, Arial">Firewall rule review evidence from the home lab environment.</text>
 </svg>

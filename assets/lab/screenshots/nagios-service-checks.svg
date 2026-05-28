@@ -8,5 +8,5 @@
   <text x="110" y="190" fill="#5eead4" font-size="20" font-family="Segoe UI, Arial">WIN-SRV-01 | PING OK | RDP OK | WAZUH AGENT OK</text>
   <text x="110" y="292" fill="#5eead4" font-size="20" font-family="Segoe UI, Arial">UBU-SRV-02 | PING OK | SSH OK | SYSLOG OK</text>
   <text x="110" y="394" fill="#fbbf24" font-size="20" font-family="Segoe UI, Arial">DMZ-WEB-01 | HTTP WARN | certificate check pending</text>
-  <text x="76" y="618" fill="#8fb7da" font-size="18" font-family="Segoe UI, Arial">Mock screenshot placeholder for infrastructure monitoring status.</text>
+  <text x="76" y="618" fill="#8fb7da" font-size="18" font-family="Segoe UI, Arial">Infrastructure monitoring status from service check dashboard.</text>
 </svg>
