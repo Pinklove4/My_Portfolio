@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { fadeUp, scaleIn, stagger } from '@/lib/motion'
+import MermaidDiagram from '@/components/MermaidDiagram'
 
 const repoBase = 'https://github.com/Pinklove4/My_Portfolio/blob/main/assets/lab'
 
@@ -340,11 +341,9 @@ export default function HomeLab() {
                   <h4 className="font-sora text-sm font-bold uppercase tracking-[0.18em] text-brand-light">
                     Network Topology Diagram
                   </h4>
-                  <span className="text-xs text-brand-muted">Mermaid.js syntax</span>
+                  <span className="text-xs text-brand-muted">Rendered topology view</span>
                 </div>
-                <pre className="overflow-x-auto rounded-xl border border-teal-300/15 bg-[#08131d] p-4 text-[11px] leading-6 text-teal-200">
-                  <code>{mermaidTopology}</code>
-                </pre>
+                <MermaidDiagram chart={mermaidTopology} title="Home lab network topology" />
               </div>
 
               <div className="space-y-4">
