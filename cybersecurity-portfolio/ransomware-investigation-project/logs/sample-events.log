@@ -1,0 +1,5 @@
+﻿2026-05-28T14:02:11Z host=lab-ws01 user=analyst1 event=auth_failure src_ip=198.51.100.44 detail="Failed sign-in attempt"
+2026-05-28T14:03:55Z host=lab-ws01 user=analyst1 event=process_start process="powershell.exe" command="encoded command observed" severity=medium
+2026-05-28T14:05:19Z host=lab-srv01 user=svc-backup event=privilege_use detail="Unexpected admin token request"
+2026-05-28T14:06:03Z host=lab-fw01 event=network_connection dst_ip=203.0.113.77 dst_port=443 action=allowed
+2026-05-28T14:07:42Z host=lab-dc01 event=group_change user=helpdesk1 group="Server Admins" action=add_member

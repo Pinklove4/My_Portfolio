@@ -1,0 +1,20 @@
+﻿[
+  {
+    "alert_id": "soc-ticketing-workflow-project-001",
+    "rule_name": "Multi-source suspicious activity correlation",
+    "severity": "high",
+    "status": "open",
+    "source": "Splunk",
+    "first_seen": "2026-05-28T14:02:11Z",
+    "entities": ["lab-ws01", "analyst1", "198.51.100.44"]
+  },
+  {
+    "alert_id": "soc-ticketing-workflow-project-002",
+    "rule_name": "Privilege anomaly detected",
+    "severity": "medium",
+    "status": "investigating",
+    "source": "Wazuh",
+    "first_seen": "2026-05-28T14:05:19Z",
+    "entities": ["lab-srv01", "svc-backup"]
+  }
+]

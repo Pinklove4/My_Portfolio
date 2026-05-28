@@ -133,8 +133,43 @@ const projects = [
   },
 ]
 
+const additionalProjects = [
+  { title: 'Endpoint Detection and Response Lab', slug: 'endpoint-detection-response-lab', domain: 'SOC and Endpoint Security' },
+  { title: 'Firewall Administration Lab', slug: 'firewall-administration-lab', domain: 'Network Defense' },
+  { title: 'SIEM Correlation Rule Project', slug: 'siem-correlation-rule-project', domain: 'Detection Engineering' },
+  { title: 'Linux Security Hardening Project', slug: 'linux-security-hardening-project', domain: 'System Administration and Hardening' },
+  { title: 'Windows Security Hardening Project', slug: 'windows-security-hardening-project', domain: 'System Administration and Hardening' },
+  { title: 'Secure Network Architecture Project', slug: 'secure-network-architecture-project', domain: 'Network Defense' },
+  { title: 'Email Threat Analysis Lab', slug: 'email-threat-analysis-lab', domain: 'SOC and Incident Response' },
+  { title: 'Threat Intelligence Platform Project', slug: 'threat-intelligence-platform-project', domain: 'Threat Intelligence and Hunting' },
+  { title: 'Security Dashboard Visualization Project', slug: 'security-dashboard-visualization-project', domain: 'SOC Operations and Metrics' },
+  { title: 'Password Attack Detection Lab', slug: 'password-attack-detection-lab', domain: 'IAM and Identity Monitoring' },
+  { title: 'Ransomware Investigation Project', slug: 'ransomware-investigation-project', domain: 'SOC and Incident Response' },
+  { title: 'Data Loss Prevention Lab', slug: 'data-loss-prevention-lab', domain: 'Endpoint Security and Compliance' },
+  { title: 'Web Application Security Testing Project', slug: 'web-application-security-testing-project', domain: 'Application Security' },
+  { title: 'Secure File Server Project', slug: 'secure-file-server-project', domain: 'System Administration and Hardening' },
+  { title: 'DNS Threat Monitoring Lab', slug: 'dns-threat-monitoring-lab', domain: 'Threat Intelligence and Hunting' },
+  { title: 'Cloud Incident Response Project', slug: 'cloud-incident-response-project', domain: 'Cloud Security and IAM' },
+  { title: 'Container Security Project', slug: 'container-security-project', domain: 'Cloud Security and IAM' },
+  { title: 'Identity and Access Management Review', slug: 'identity-access-management-review', domain: 'Cloud Security and IAM' },
+  { title: 'Mobile Device Security Project', slug: 'mobile-device-security-project', domain: 'Endpoint Security and Compliance' },
+  { title: 'Insider Threat Investigation', slug: 'insider-threat-investigation', domain: 'Threat Intelligence and Hunting' },
+  { title: 'Patch Management Program', slug: 'patch-management-program', domain: 'Vulnerability Management' },
+  { title: 'Malware Analysis Basics Project', slug: 'malware-analysis-basics-project', domain: 'SOC and Incident Response' },
+  { title: 'Secure Backup and Recovery Lab', slug: 'secure-backup-recovery-lab', domain: 'Vulnerability Management' },
+  { title: 'SOC Ticketing Workflow Project', slug: 'soc-ticketing-workflow-project', domain: 'SOC Operations and Metrics' },
+  { title: 'Cybersecurity Governance Project', slug: 'cybersecurity-governance-project', domain: 'Endpoint Security and Compliance' },
+]
+
 export default function Projects() {
   const [expanded, setExpanded] = useState<number | null>(null)
+  const groupedAdditionalProjects = additionalProjects.reduce<Record<string, typeof additionalProjects>>((acc, project) => {
+    if (!acc[project.domain]) {
+      acc[project.domain] = []
+    }
+    acc[project.domain].push(project)
+    return acc
+  }, {})
 
   const renderMeter = (value: number, max: number, filledClass: string) => {
     const filledSegments = Math.max(1, Math.round((value / max) * 10))
@@ -371,6 +406,59 @@ export default function Projects() {
               </motion.div>
             )
           })}
+        </motion.div>
+
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-80px' }}
+          className="mt-14 card-glass p-6 lg:p-7"
+        >
+          <motion.div variants={fadeUp} className="mb-6">
+            <p className="section-label mb-2">Expanded Labs</p>
+            <h3 className="font-sora text-2xl lg:text-3xl text-brand-light mb-2">
+              25 Additional Cybersecurity Projects
+            </h3>
+            <p className="text-brand-muted text-sm lg:text-base max-w-3xl">
+              Organized by domain to reflect practical SOC, cloud, endpoint, vulnerability management, and detection engineering experience.
+            </p>
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="grid md:grid-cols-2 gap-5">
+            {Object.entries(groupedAdditionalProjects).map(([domain, domainProjects]) => (
+              <div key={domain} className="rounded-2xl border border-navy-700/40 bg-navy-950/35 p-4">
+                <h4 className="text-sm font-bold uppercase tracking-wide text-teal-300 mb-3">{domain}</h4>
+                <ul className="space-y-2">
+                  {domainProjects.map((project) => (
+                    <li key={project.slug}>
+                      <a
+                        href={`https://github.com/Pinklove4/My_Portfolio/tree/main/cybersecurity-portfolio/${project.slug}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-start gap-2 text-sm text-brand-muted hover:text-sky-300 transition-colors"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5 mt-0.5 shrink-0 text-sky-400 group-hover:text-sky-300" />
+                        <span>{project.title}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="mt-6 pt-4 border-t border-navy-700/40 flex flex-wrap gap-3">
+            <a
+              href="https://github.com/Pinklove4/My_Portfolio/tree/main/cybersecurity-portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-flex items-center gap-2"
+            >
+              <Github className="w-4 h-4" />
+              View Full Cybersecurity Portfolio
+            </a>
+          </motion.div>
         </motion.div>
       </div>
     </section>
