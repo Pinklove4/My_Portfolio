@@ -748,6 +748,8 @@ export default function Projects() {
               <select
                 value={labCategoryFilter}
                 onChange={(event) => setLabCategoryFilter(event.target.value)}
+                aria-label="Filter labs by category"
+                title="Filter labs by category"
                 className="bg-navy-900/70 border border-navy-700/50 rounded-xl px-3 py-2.5 text-sm text-brand-light focus:outline-none focus:border-teal-300/50"
               >
                 <option value="all">All Categories</option>
@@ -758,6 +760,8 @@ export default function Projects() {
               <select
                 value={labSkillFilter}
                 onChange={(event) => setLabSkillFilter(event.target.value)}
+                aria-label="Filter labs by skill"
+                title="Filter labs by skill"
                 className="bg-navy-900/70 border border-navy-700/50 rounded-xl px-3 py-2.5 text-sm text-brand-light focus:outline-none focus:border-teal-300/50"
               >
                 <option value="all">All Skills</option>
