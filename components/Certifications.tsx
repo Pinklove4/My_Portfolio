@@ -18,6 +18,17 @@ const certs = [
   },
   {
     id: 2,
+    name: 'CompTIA CySA+',
+    issuer: 'CompTIA',
+    code: 'CySA+',
+    status: 'Completed',
+    color: 'sky',
+    abbr: 'CYSA+',
+    desc: 'Earned May 29, 2026.',
+    year: '2026',
+  },
+  {
+    id: 3,
     name: 'ISC2 Candidate (CC Program)',
     issuer: 'ISC2',
     code: 'CC Program',
@@ -70,7 +81,6 @@ const learningCredentials = [
 const inProgressCerts = [
   'CompTIA Network+',
   'AWS Certified Cloud Practitioner',
-  'CompTIA CySA+',
   'CompTIA Linux+',
   'CompTIA Server+',
   'CompTIA A+',
