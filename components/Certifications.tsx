@@ -38,6 +38,17 @@ const certs = [
     desc: 'Candidate status active. Program expiration: Mar 31, 2027.',
     year: 'Expires 2027',
   },
+  {
+    id: 4,
+    name: 'AWS Certified Cloud Practitioner',
+    issuer: 'Amazon Web Services',
+    code: 'Cloud Practitioner',
+    status: 'Completed',
+    color: 'sky',
+    abbr: 'AWS',
+    desc: 'AWS cloud fundamentals certification completed.',
+    year: '',
+  },
 ]
 
 const learningCredentials = [
@@ -80,7 +91,6 @@ const learningCredentials = [
 
 const inProgressCerts = [
   'CompTIA Network+',
-  'AWS Certified Cloud Practitioner',
   'CompTIA Linux+',
   'CompTIA Server+',
   'CompTIA A+',
@@ -168,7 +178,7 @@ export default function Certifications() {
               <p className="text-brand-muted text-xs leading-relaxed flex-1 mb-4">{cert.desc}</p>
 
               <div className="flex items-center justify-between pt-3 border-t border-navy-700/40">
-                <span className="text-xs text-brand-muted">Target: {cert.year}</span>
+                {cert.year && <span className="text-xs text-brand-muted">Target: {cert.year}</span>}
                 {cert.status === 'Completed' ? (
                   <span
                     className={`flex items-center gap-1 text-xs font-semibold ${
